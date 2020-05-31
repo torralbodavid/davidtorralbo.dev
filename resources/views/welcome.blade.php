@@ -4,10 +4,10 @@
     <div class="container mx-auto px-4">
         @include('partials.menu')
 
-        <section class="py-12 px-4 text-center bg-gray-50" style="background-image: url('https://i.imgur.com/TdwUZ2S.png')">
+        <section class="py-12 px-4 text-center bg-gray-50 shadow-xl">
             <div class="w-full max-w-2xl mx-auto">
                 <h2 class="text-5xl mt-2 mb-6 leading-tight font-heading">David Torralbo</h2>
-                <p class="text-white mb-8 mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">{{ config('me.birth')->age }} years old <strong>Backend developer</strong> from <a
+                <p class="mb-8 mt-4 max-w-2xl text-xl leading-7 text-gray-900 lg:mx-auto">{{ config('me.birth')->age }} years old <strong>Backend developer</strong> from <a
                         class="text-red-500 hover:text-red-800 hover:underline" target="_blank" href="https://goo.gl/maps/YBesNtYySBKp14Ji8">Banyoles, Catalonia</a>.</p>
                 <div class="inline-flex rounded-md shadow">
                     <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
@@ -24,7 +24,7 @@
             </div>
         </section>
 
-        <div class="bg-gray-50">
+        <div class="bg-gray-50 shadow-xl">
             <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
                 <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
                     Ready to dive in?

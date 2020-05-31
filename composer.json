@@ -15,7 +15,8 @@
         "laravel-frontend-presets/tall": "^1.7",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "livewire/livewire": "^1.1"
+        "livewire/livewire": "^1.1",
+        "themsaid/wink": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
