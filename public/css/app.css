@@ -606,6 +606,10 @@ p {
   color: rgba(107, 114, 128, var(--text-opacity));
 }
 
+strong {
+  font-weight: 700;
+}
+
 /**
  * Remove the default box-shadow for invalid elements to prevent
  * inputs in Livewire components showing with a
