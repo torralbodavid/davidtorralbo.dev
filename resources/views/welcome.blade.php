@@ -2,76 +2,32 @@
 
 @section('content')
     <div class="container mx-auto px-4">
+        @include('partials.menu')
 
-        <nav class="flex flex-wrap items-center justify-between p-4">
-            <div class="lg:order-2 w-auto lg:w-1/5 lg:text-center"><a class="text-xl text-indigo-500 font-semibold" href="#">Dunder Mifflin</a></div>
-            <div class="block lg:hidden">
-                <button class="navbar-burger flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500">
-                    <svg class="fill-current h-3 w-3" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z">
-                    </svg>
-                </button>
-            </div>
-            <div class="navbar-menu hidden lg:order-1 lg:block w-full lg:w-2/5"><a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-blue-700" href="#">Products</a><a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-blue-700" href="#">Team</a><a class="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-blue-700" href="#">Customers</a></div>
-            <div class="navbar-menu hidden lg:order-3 lg:block w-full lg:w-2/5 lg:text-right"><a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-blue-700" href="#">Blog</a><a class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-blue-700" href="#">FAQ</a><a class="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-blue-700" href="#">Contact</a></div>
-        </nav>
-
-        <section class="py-12 px-4 text-center">
+        <section class="py-12 px-4 text-center bg-gray-50">
             <div class="w-full max-w-2xl mx-auto">
-                <span class="text-sm font-semibold">TAGLINE</span>
-                <h2 class="text-5xl mt-2 mb-6 leading-tight font-heading">No paper plane can be made without paper</h2>
-                <p class="mb-8 text-gray-500 leading-relaxed">Professional, dedicated, local. Dunder Mifflin is on its best patch to change the way you think about paper. That’s us - people who sell limitless paper in the paperless world.</p>
-                <div><a class="inline-block py-4 px-8 mr-6 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" href="#">Sign up</a><a class="text-blue-700 hover:underline" href="#">Learn more</a></div>
+                <h2 class="text-5xl mt-2 mb-6 leading-tight font-heading">David Torralbo</h2>
+                <p class="mb-8 mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">Backend developer from <a
+                        class="text-red-500 hover:text-red-800 hover:underline" target="_blank" href="https://goo.gl/maps/YBesNtYySBKp14Ji8">Banyoles, Catalonia</a>.</p>
+                <div class="inline-flex rounded-md shadow">
+                    <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                        About me
+                    </a>
+                </div>
             </div>
         </section>
 
         <section class="py-12 px-4">
             <h2 class="text-3xl text-center mb-8 font-heading">Latest posts</h2>
             <div class="flex flex-wrap -mx-4">
-                <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
-                    <div class="h-full pb-8 rounded shadow-md">
-                        <a href="#">
-                            <img class="mb-4" src="placeholders/pictures/work.jpg" alt="">
-                            <div class="px-6">
-                                <small>22 Oct 2019 | By Michael Scott</small>
-                                <h3 class="text-xl my-3 font-heading">Being world’s best boss</h3>
-                                <p class="text-gray-500">The wise man once said: "Friend first, boss second, entertainer third". That man was me.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
-                    <div class="h-full pb-8 rounded shadow-md">
-                        <a href="#">
-                            <img class="mb-4" src="placeholders/pictures/office.jpg" alt="">
-                            <div class="px-6">
-                                <small>22 Oct 2019 | By Dwight K. Schrute</small>
-                                <h3 class="text-xl my-3 font-heading">Understanding the paper</h3>
-                                <p class="text-gray-500">So you think you know everything about paper? False, you know nothing. Let me illuminate your first steps into my world.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
-                    <div class="h-full pb-8 rounded shadow-md">
-                        <a href="#">
-                            <img class="mb-4" src="placeholders/pictures/work.jpg" alt="">
-                            <div class="px-6">
-                                <small>22 Oct 2019 | By Jim Halpert</small>
-                                <h3 class="text-xl my-3 font-heading">Dwight doesn’t understand the paper</h3>
-                                <p class="text-gray-500">Read it and finally find out that Dwight Schrute is merely a scammer.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                @include('partials.blog.section')
             </div>
         </section>
 
-        <section class="py-12 px-4">
+        <section class="py-12 px-4 bg-gray-50">
             <h2 class="text-3xl mb-8 text-center font-heading">How to get Dunder Mifflined?</h2>
             <div class="flex max-w-sm mb-10 mx-auto text-center border-b-2">
-                <div class="w-1/2 pb-2 border-b-4 border-indigo-500">
+                <div class="w-1/2 pb-2 border-b-4 border-red-500">
                     <button>For Customers</button>
                 </div>
                 <div class="w-1/2 pb-2">
@@ -116,7 +72,7 @@
                     <p class="text-gray-500 leading-relaxed">You don’t buy a pig... or shall I say a paper in a poke. The supplies will be delivered to your company every first Monday of the month.</p>
                 </div>
             </div>
-            <div><a class="inline-block py-4 px-8 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" href="#">Learn more</a></div>
+            <div><a class="inline-block py-4 px-8 leading-none text-white bg-red-500 hover:bg-red-600 rounded shadow" href="#">Learn more</a></div>
         </section>
 
         <section class="p-4">
@@ -166,14 +122,27 @@
             </div>
         </section>
 
-        <section class="py-8 px-4">
-            <div class="flex flex-wrap -mx-4">
-                <div class="lg:w-4/6 px-4 mb-8 lg:mb-0 text-center lg:text-left">
-                    <h2 class="text-xl font-heading">Are you a carte blanche of the paper industry? No worries, our team will help you in&nbsp;implementation process and dispel doubts.</h2>
+        <div class="bg-gray-50">
+            <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+                <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+                    Ready to dive in?
+                    <br />
+                    <span class="text-red-600">Start your free trial today.</span>
+                </h2>
+                <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
+                    <div class="inline-flex rounded-md shadow">
+                        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                            Get started
+                        </a>
+                    </div>
+                    <div class="ml-3 inline-flex rounded-md shadow">
+                        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-red-600 bg-white hover:text-red-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+                            Learn more
+                        </a>
+                    </div>
                 </div>
-                <div class="w-full lg:w-2/6 px-4 text-center"><a class="inline-block py-4 px-8 mb-4 sm:mb-0 mr-6 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" href="#">Sign up for free</a><a class="inline-block text-blue-700 hover:underline" href="#">Learn more</a></div>
             </div>
-        </section>
+        </div>
 
         <footer class="p-4">
             <div class="flex flex-col lg:flex-row items-center">

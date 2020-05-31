@@ -599,6 +599,13 @@ video {
   height: auto;
 }
 
+p {
+  line-height: 1.75rem;
+  --text-opacity: 1;
+  color: #6b7280;
+  color: rgba(107, 114, 128, var(--text-opacity));
+}
+
 /**
  * Remove the default box-shadow for invalid elements to prevent
  * inputs in Livewire components showing with a

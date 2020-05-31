@@ -7,6 +7,10 @@
  */
 @tailwind base;
 
+p {
+  @apply leading-7 text-gray-500;
+}
+
 /**
  * Remove the default box-shadow for invalid elements to prevent
  * inputs in Livewire components showing with a
