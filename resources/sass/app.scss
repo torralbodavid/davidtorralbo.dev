@@ -15,6 +15,16 @@ strong {
     @apply font-bold;
 }
 
+h2 {
+    @apply text-2xl;
+}
+h3 {
+    @apply text-xl;
+}
+#post a {
+    @apply text-red-600 underline;
+}
+
 /**
  * Remove the default box-shadow for invalid elements to prevent
  * inputs in Livewire components showing with a
