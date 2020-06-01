@@ -1,6 +1,10 @@
 require('./bootstrap');
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    var Turbolinks = require("turbolinks")
+    Turbolinks.start()
+
     const menus = document.querySelectorAll('.navbar-burger');
     const dropdowns = document.querySelectorAll('.navbar-menu');
 
