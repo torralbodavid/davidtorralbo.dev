@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-
-Route::get('/home', function () {
-    return view('welcome');
 })->name('home');
+
+Route::livewire('posts')->name('posts');
+
+Route::livewire('post/{slug}', 'post')->name('post');
+

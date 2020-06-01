@@ -1,7 +1,7 @@
 @foreach ($posts as $post)
-    <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
+    <article class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
         <div class="h-full pb-8 rounded shadow-md">
-            <a href="#">
+            <a href="{{ route('post', $post->slug) }}">
                 <img class="mb-4 rounded-t" src="{{ asset($post->featured_image) }}" alt="{{ $post->title }}">
             </a>
             <div class="px-6">
@@ -31,11 +31,14 @@
                         </a>
                     </small>
                 @endforeach
+
                 <a href="#">
                     <h3 class="text-xl my-3 font-heading">{{ $post->title }}</h3>
                 </a>
                 <p class="text-gray-500">{{ $post->excerpt }}</p>
             </div>
         </div>
-    </div>
+    </article>
 @endforeach
+
+{{ $posts->links() }}

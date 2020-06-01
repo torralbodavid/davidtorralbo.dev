@@ -10,7 +10,7 @@ class Section extends Component
     public function render()
     {
         return view('livewire.blog.section', [
-            'posts' => WinkPost::all(),
+            'posts' => WinkPost::with('tags')->paginate(9),
         ]);
     }
 }
