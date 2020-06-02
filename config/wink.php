@@ -76,5 +76,5 @@ return [
     |
     */
 
-    'preview_path' => '/{postSlug}',
+    'preview_path' => '/post/{postSlug}',
 ];
