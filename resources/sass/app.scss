@@ -21,9 +21,13 @@ h2 {
 h3 {
     @apply text-xl;
 }
-#post a {
-    @apply text-red-600 underline;
+
+.py-05 {
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
 }
+
+@import "post";
 
 /**
  * Remove the default box-shadow for invalid elements to prevent
