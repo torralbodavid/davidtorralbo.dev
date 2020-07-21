@@ -1,28 +1,41 @@
-<div>
-    <section class="py-12 px-4 text-center">
-        <div class="w-full max-w-2xl mx-auto">
-
-            <nav class="text-black font-bold" aria-label="Breadcrumb">
-                <ol class="list-none p-0 inline-flex">
-                    <li class="flex items-center">
-                        <a href="{{ route('posts') }}" class="text-gray-600">Posts</a>
-                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
-                    </li>
-                    <li class="flex items-center">
-                        <a href="#">{{ $post->title }}</a>
-                    </li>
-                </ol>
-            </nav>
-
-            <h1 class="text-5xl mt-2 leading-tight font-heading">{{ $post->title }}</h1>
-        </div>
-    </section>
-
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-            <article id="post" class="py-8 px-4">
-                {!! $post->content !!}
-            </article>
+<article class="relative py-16 bg-white overflow-hidden">
+    <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
+        <div class="relative h-full text-lg max-w-prose mx-auto">
+            <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf357" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)" />
+            </svg>
+            <svg class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
+            </svg>
+            <svg class="absolute bottom-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="d3eb07ae-5182-43e6-857d-35c643af9034" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)" />
+            </svg>
         </div>
     </div>
-</div>
+    <div class="relative px-4 sm:px-6 lg:px-8">
+        <div class="text-lg max-w-prose mx-auto mb-6">
+            <p class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Posts</p>
+            <h1 class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">{{ $post->title }}</h1>
+            <p class="text-xl text-gray-500 leading-8">{{ $post->excerpt }}</p>
+        </div>
+        <div class="prose prose-lg text-gray-500 mx-auto">
+            {!! $post->content !!}
+        </div>
+    </div>
+</article>
+
