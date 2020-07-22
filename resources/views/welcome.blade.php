@@ -5,9 +5,9 @@
         <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
             <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
                 <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
-                    Data to enrich your
+                    Welcome to my personal
                     <br class="xl:hidden">
-                    <span class="text-indigo-600">online business</span>
+                    <span class="text-teal-600">blog</span>
                 </h2>
                 <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
                     Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
@@ -16,7 +16,7 @@
                 <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                     <div class="rounded-md shadow">
                         <a href="#"
-                           class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                           class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-500 focus:outline-none focus:border-teal-700 focus:shadow-outline-teal transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                             About me
                         </a>
                     </div>
@@ -30,10 +30,10 @@
         </div>
     </main>
 
-    <livewire:posts/>
+    <livewire:posts :items="3" :pagination="false"/>
 
     <div class="relative bg-gray-800">
-        <div class="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+        <div class="h-56 bg-teal-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
             <img class="w-full h-full object-cover"
                  src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6875F5&sat=-100&blend-mode=multiply"
                  alt="Support team">

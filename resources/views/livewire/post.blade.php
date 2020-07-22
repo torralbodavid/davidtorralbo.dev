@@ -29,7 +29,7 @@
     </div>
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto mb-6">
-            <p class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Posts</p>
+            <p class="text-base text-center leading-6 text-teal-600 font-semibold tracking-wide uppercase">Posts</p>
             <h1 class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">{{ $post->title }}</h1>
             <p class="text-xl text-gray-500 leading-8">{{ $post->excerpt }}</p>
         </div>

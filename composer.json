@@ -30,7 +30,7 @@
     },
     "config": {
         "optimize-autoloader": true,
-        "preferred-install": "dist",
+        "preferteal-install": "dist",
         "sort-packages": true
     },
     "extra": {
