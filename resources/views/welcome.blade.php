@@ -25,6 +25,7 @@
         </div>
         <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
             <img class="absolute inset-0 w-full h-full object-cover"
+                 loading="lazy"
                  src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
                  alt="Woman on her phone">
         </div>
@@ -35,6 +36,7 @@
     <div class="relative bg-gray-800">
         <div class="h-56 bg-teal-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
             <img class="w-full h-full object-cover"
+                 loading="lazy"
                  src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6875F5&sat=-100&blend-mode=multiply"
                  alt="Support team">
         </div>

@@ -10,21 +10,17 @@
             <title>{{ config('app.name') }}</title>
         @endif
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}" media="print" onload="this.media='all'">
         @livewireStyles
 
-        <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 
     <body class="bg-body text-body font-body">
         @yield('body')
 
-        <script src="{{ mix('js/app.js') }}"></script>
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
+        <script async defer src="{{ mix('js/app.js') }}"></script>
         @livewireScripts
     </body>
 </html>
