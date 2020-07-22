@@ -2,22 +2,23 @@
 
 namespace App\Http\Livewire\Blog;
 
+use Illuminate\Pagination\LengthAwarePaginator;
 use Livewire\Component;
 use Wink\WinkPost;
 
 class Section extends Component
 {
-    public $items;
+    private LengthAwarePaginator $posts;
 
-    public function mount($items = 9)
+    public function mount($posts)
     {
-        $this->items = $items;
+        $this->posts = $posts;
     }
 
     public function render()
     {
         return view('livewire.blog.section', [
-            'posts' => WinkPost::with('tags')->paginate($this->items),
+            'posts' => $this->posts,
         ]);
     }
 }
