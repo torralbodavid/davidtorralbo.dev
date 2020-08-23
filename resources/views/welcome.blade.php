@@ -1,23 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-    <main class="bg-gray-100 lg:relative">
+    <main class="bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 lg:relative">
         <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
             <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-                <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
+                <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
                     Welcome to my personal
                     <br class="xl:hidden">
-                    <span class="text-teal-600">blog</span>
+                    <span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">blog</span>
                 </h2>
-                <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
+                <p class="mt-3 max-w-md mx-auto text-lg text-gray-200 sm:text-xl md:mt-5 md:max-w-3xl">
                     Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
                     amet fugiat veniam occaecat fugiat aliqua.
                 </p>
                 <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                     <div class="rounded-md shadow">
                         <a href="#"
-                           class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-500 focus:outline-none focus:border-teal-700 focus:shadow-outline-teal transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
-                            About me
+                           class="text-gray-900 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-white hover:bg-white focus:outline-none focus:border-white focus:shadow-outline-teal transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                            Contact me
                         </a>
                     </div>
                 </div>
@@ -26,29 +26,29 @@
         <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
             <img class="absolute inset-0 w-full h-full object-cover"
                  loading="lazy"
-                 src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                 alt="Woman on her phone">
+                 src="{{ asset('images/david-torralbo-hero-section.jpg') }}"
+                 alt="David Torralbo">
         </div>
     </main>
 
     <livewire:posts :items="3" :pagination="false"/>
 
-    <div class="relative bg-gray-800">
+    <div class="relative bg-gradient-to-r from-green-400 via-teal-500 to-blue-500">
         <div class="h-56 bg-teal-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
             <img class="w-full h-full object-cover"
                  loading="lazy"
-                 src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6875F5&sat=-100&blend-mode=multiply"
-                 alt="Support team">
+                 src="{{ asset('images/estany-de-banyoles.jpg') }}"
+                 alt="Estany de Banyoles">
         </div>
         <div class="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
             <div class="md:ml-auto md:w-1/2 md:pl-10">
-                <div class="text-base leading-6 font-semibold uppercase tracking-wider text-gray-300">
+                <div class="text-base leading-6 font-semibold uppercase tracking-wider text-gray-200">
                     Award winning support
                 </div>
                 <h2 class="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
                     We’re here to help
                 </h2>
-                <p class="mt-3 text-lg leading-7 text-gray-300">
+                <p class="mt-3 text-lg leading-7 text-gray-200">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a
                     scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum
                     tincidunt duis.
