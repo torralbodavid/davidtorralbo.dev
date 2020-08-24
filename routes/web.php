@@ -17,7 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
 Route::livewire('posts')->name('posts');
 
 Route::livewire('post/{slug}', 'post')->name('post');
+Route::livewire('{slug}', 'page')->name('page');
 

@@ -29,13 +29,11 @@
     </div>
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto mb-6">
-            <p class="text-base text-center leading-6 text-teal-600 font-semibold tracking-wide uppercase">Posts</p>
-            <h2 class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">{{ $post->title }}</h2>
-            <p class="text-xl text-gray-500 leading-8">{{ $post->excerpt }}</p>
+            <p class="text-base text-center leading-6 text-teal-600 font-semibold tracking-wide uppercase">Page</p>
+            <h2 class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">{{ $page->title }}</h2>
         </div>
         <div class="prose prose-lg text-gray-500 mx-auto">
-            {!! $post->content !!}
+            {!! $page->content !!}
         </div>
     </div>
 </article>
-
