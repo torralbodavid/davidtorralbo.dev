@@ -19,7 +19,7 @@ class Posts extends Component
     public function render()
     {
         return view('livewire.posts', [
-            'posts' => WinkPost::with('tags')->paginate($this->items),
+            'posts' => WinkPost::with('tags')->orderByDesc('created_at')->paginate($this->items),
             'items' => $this->items,
             'pagination' => $this->pagination
         ]);
