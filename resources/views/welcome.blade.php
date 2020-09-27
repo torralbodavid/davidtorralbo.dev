@@ -28,7 +28,7 @@
         <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
             <img class="absolute inset-0 w-full h-full object-cover"
                  loading="lazy"
-                 src="{{ asset('images/david-torralbo-hero-section.jpg') }}"
+                 src="{{ ImageCacher::resize('david-torralbo-hero-section.jpg', 1280, null)->getOriginalName() }}"
                  alt="David Torralbo">
         </div>
     </main>
@@ -39,7 +39,7 @@
         <div class="h-56 bg-teal-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
             <img class="w-full h-full object-cover"
                  loading="lazy"
-                 src="{{ asset('images/estany-de-banyoles.jpg') }}"
+                 src="{{ ImageCacher::resize('estany-de-banyoles.jpg', 1280, null)->getOriginalName() }}"
                  alt="Estany de Banyoles">
         </div>
         <div class="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
