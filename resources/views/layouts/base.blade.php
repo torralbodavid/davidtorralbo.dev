@@ -10,6 +10,8 @@
             <title>{{ config('app.name') }}</title>
         @endif
 
+        <meta name="description" content="Lorem ipsum dolor sit amet consecteur lorem ipsum.">
+
         <link rel="stylesheet" href="{{ mix('css/app.css') }}" media="print" onload="this.media='all'">
         @livewireStyles
 
@@ -19,8 +21,8 @@
     <body class="bg-body text-body font-body">
         @yield('body')
 
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
         <script async defer src="{{ mix('js/app.js') }}"></script>
         @livewireScripts
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>

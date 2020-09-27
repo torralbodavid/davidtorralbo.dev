@@ -3,7 +3,10 @@
         <div class="flex-shrink-0">
             <a href="{{ route('post', $post->slug) }}">
                 <img class="h-48 w-full object-cover"
-                     src="{{ asset($post->featured_image) }}"
+                     srcset="{{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 382, 192)->getOriginalName() }} 414w,
+                         {{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 512, 192)->getOriginalName() }} 800w,
+                         {{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 392, 192)->getOriginalName() }} 1280w"
+                     src="{{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 414, 192)->getOriginalName() }}"
                      alt="{{ $post->title }}">
             </a>
         </div>

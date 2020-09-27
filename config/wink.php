@@ -28,7 +28,7 @@ return [
 
     'storage_disk' => env('WINK_STORAGE_DISK', 'local'),
 
-    'storage_path' => env('WINK_STORAGE_PATH', 'public/wink/images'),
+    'storage_path' => env('WINK_STORAGE_PATH', 'public/img/wink/images'),
 
     /*
     |--------------------------------------------------------------------------

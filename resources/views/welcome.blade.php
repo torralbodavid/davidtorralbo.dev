@@ -16,7 +16,7 @@
                 <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                     <div class="rounded-md">
                         <span class="inline-flex rounded-md shadow-sm">
-                          <button type="button" class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+                          <button aria-label="Sobre mi" type="button" class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
                             Sobre mi
                               <svg viewBox="0 0 20 20" fill="currentColor" class="ml-3 -mr-1 h-5 w-5"><path fill-rule="evenodd" d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                           </button>
@@ -28,7 +28,10 @@
         <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
             <img class="absolute inset-0 w-full h-full object-cover"
                  loading="lazy"
-                 src="{{ ImageCacher::resize('david-torralbo-hero-section.jpg', 1280, null)->getOriginalName() }}"
+                 srcset="{{ ImageCacher::resize('david-torralbo-hero-section.jpg', 414, 256)->getOriginalName() }} 414w,
+                         {{ ImageCacher::resize('david-torralbo-hero-section.jpg', 800, 384)->getOriginalName() }} 800w,
+                         {{ ImageCacher::resize('david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }} 1280w"
+                 src="{{ ImageCacher::resize('david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }}"
                  alt="David Torralbo">
         </div>
     </main>
@@ -39,6 +42,9 @@
         <div class="h-56 bg-teal-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
             <img class="w-full h-full object-cover"
                  loading="lazy"
+                 srcset="{{ ImageCacher::resize('estany-de-banyoles.jpg', 414, null)->getOriginalName() }} 414w,
+                         {{ ImageCacher::resize('estany-de-banyoles.jpg', 400, 498)->getOriginalName() }} 800w,
+                         {{ ImageCacher::resize('estany-de-banyoles.jpg', 711, null)->getOriginalName() }} 1280w"
                  src="{{ ImageCacher::resize('estany-de-banyoles.jpg', 1280, null)->getOriginalName() }}"
                  alt="Estany de Banyoles">
         </div>
