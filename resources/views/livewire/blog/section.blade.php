@@ -15,9 +15,11 @@
             <div class="flex-1">
                 <p class="text-sm leading-5 font-medium text-teal-600">
                     @foreach($post->tags as $tag)
-                        <a href="#" class="hover:underline">
-                            {{ $tag->name }}
-                        </a>
+                        <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
+                            <a href="#" class="hover:underline">
+                                {{ $tag->name }}
+                            </a>
+                        </span>
                     @endforeach
                 </p>
                 <a href="{{ route('post', $post->slug) }}" class="block">
