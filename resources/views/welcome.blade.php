@@ -28,10 +28,10 @@
         <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
             <img class="absolute inset-0 w-full h-full object-cover"
                  loading="lazy"
-                 srcset="{{ ImageCacher::resize('david-torralbo-hero-section.jpg', 414, 256)->getOriginalName() }} 414w,
-                         {{ ImageCacher::resize('david-torralbo-hero-section.jpg', 800, 384)->getOriginalName() }} 800w,
-                         {{ ImageCacher::resize('david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }} 1280w"
-                 src="{{ ImageCacher::resize('david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }}"
+                 srcset="{{ ImageCacher::crop('david-torralbo-hero-section.jpg', 414, 256)->getOriginalName() }} 414w,
+                         {{ ImageCacher::crop('david-torralbo-hero-section.jpg', 800, 384)->getOriginalName() }} 800w,
+                         {{ ImageCacher::crop('david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }} 1280w"
+                 src="{{ ImageCacher::crop('david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }}"
                  alt="David Torralbo">
         </div>
     </main>
