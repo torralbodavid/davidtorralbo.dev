@@ -11,13 +11,13 @@
         "php": "^7.4",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
-        "gnahotelsolutions/image-cacher": "^1.2",
+        "gnahotelsolutions/image-cacher": "1.2",
         "guzzlehttp/guzzle": "^6.3",
         "laravel-frontend-presets/tall": "^1.7",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^1.1",
-        "themsaid/wink": "^1.0",
+        "themsaid/wink": "1.1.0",
         "torralbodavid/simple-recaptcha-v3": "^1.2"
     },
     "require-dev": {
@@ -54,7 +54,7 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
+    "prefer-stable": false,
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
