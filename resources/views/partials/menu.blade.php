@@ -15,19 +15,19 @@
             </div>
             <nav class="hidden md:flex space-x-10">
                 <a href="{{ route('posts') }}" class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                    Posts
+                    Entradas
                 </a>
 
                 <a href="#" class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                    About me
+                    Sobre mi
                 </a>
 
                 <a href="#" class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                    Projects
+                    Mis proyectos
                 </a>
 
                 <a href="#" class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                    Contact me
+                    Contacto
                 </a>
             </nav>
             <div class="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
