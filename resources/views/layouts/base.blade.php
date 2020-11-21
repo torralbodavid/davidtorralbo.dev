@@ -16,6 +16,8 @@
         @livewireStyles
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <link rel="canonical" href="{{ Request::url() }}" />
     </head>
 
     <body class="bg-body text-body font-body">
