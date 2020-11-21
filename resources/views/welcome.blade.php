@@ -86,7 +86,6 @@
         </div>
     </div>
 
-
     <livewire:posts :items="3" :pagination="false"/>
 
     <section class="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
