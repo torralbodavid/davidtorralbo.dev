@@ -2,5 +2,5 @@
     # Nou missatge de {{ $name }}
     {{ $email }}
 
-{{ $text }}
+    {{ $text }}
 @endcomponent

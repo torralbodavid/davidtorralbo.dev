@@ -10,7 +10,7 @@
             <title>{{ config('app.name') }}</title>
         @endif
 
-        <meta name="description" content="Lorem ipsum dolor sit amet consecteur lorem ipsum.">
+        <meta name="description" content="@yield('description')">
 
         <link rel="stylesheet" href="{{ mix('css/app.css') }}" media="print" onload="this.media='all'">
         @livewireStyles
@@ -18,6 +18,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <link rel="canonical" href="{{ Request::url() }}" />
+
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.js" defer></script>
     </head>
 
     <body class="bg-body text-body font-body">

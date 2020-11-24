@@ -36,6 +36,10 @@
     </div>
 </form>
 
+@if (session()->has('title') || session()->has('description'))
+    <x-app-notification :title="session('title')" :description="session('description')" />
+@endif
+
 @error('name') <span class="error">{{ $message }}</span> @enderror
 @error('surname') <span class="error">{{ $message }}</span> @enderror
 @error('email') <span class="error">{{ $message }}</span> @enderror

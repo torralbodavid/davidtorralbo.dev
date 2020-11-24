@@ -22,6 +22,11 @@ class Contact extends Component
         ]);
 
         Mail::to('davidtorralboperez@gmail.com')->send(new \App\Mail\Contact($this->name, $this->surname, $this->email, $this->text));
+
+        session()->flash('title', 'Mensaje enviado correctamente');
+        session()->flash('description', "Le contestaré tan pronto como sea posible 😊.");
+
+        return redirect()->to(route('contact'));
     }
 
     public function render()
