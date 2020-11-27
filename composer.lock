@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd1ce9a090562f69cbff8fa23cd79da9",
+    "content-hash": "c19bbe60100969be389e51dd9b25ea15",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2321,16 +2321,16 @@
         },
         {
             "name": "ramsey/collection",
-            "version": "1.2.x-dev",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/collection.git",
-                "reference": "91e16d7de6e801d9e8e182388854ba69d7ce4134"
+                "reference": "24d93aefb2cd786b7edd9f45b554aea20b28b9b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/91e16d7de6e801d9e8e182388854ba69d7ce4134",
-                "reference": "91e16d7de6e801d9e8e182388854ba69d7ce4134",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/24d93aefb2cd786b7edd9f45b554aea20b28b9b1",
+                "reference": "24d93aefb2cd786b7edd9f45b554aea20b28b9b1",
                 "shasum": ""
             },
             "require": {
@@ -2354,7 +2354,6 @@
                 "squizlabs/php_codesniffer": "^3.5",
                 "vimeo/psalm": "^3.12.2"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -2383,7 +2382,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/collection/issues",
-                "source": "https://github.com/ramsey/collection/tree/1.2.x"
+                "source": "https://github.com/ramsey/collection/tree/1.1.1"
             },
             "funding": [
                 {
@@ -2391,7 +2390,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-10T21:03:04+00:00"
+            "time": "2020-09-10T20:58:17+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -2487,6 +2486,76 @@
                 }
             ],
             "time": "2020-11-05T21:15:32+00:00"
+        },
+        {
+            "name": "spatie/laravel-honeypot",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-honeypot.git",
+                "reference": "ed71dd03af7b393b60eb089d97e0af4f698e68d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-honeypot/zipball/ed71dd03af7b393b60eb089d97e0af4f698e68d0",
+                "reference": "ed71dd03af7b393b60eb089d97e0af4f698e68d0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^7.0|^8.0",
+                "illuminate/encryption": "^7.0|^8.0",
+                "illuminate/http": "^7.0|^8.0",
+                "illuminate/support": "^7.0|^8.0",
+                "illuminate/validation": "^7.0|^8.0",
+                "nesbot/carbon": "^2.0",
+                "php": "^7.2|^7.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.0|^6.0",
+                "spatie/phpunit-snapshot-assertions": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Honeypot\\HoneypotServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Honeypot\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Preventing spam submitted through forms",
+            "homepage": "https://github.com/spatie/laravel-honeypot",
+            "keywords": [
+                "laravel-honeypot",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-honeypot/issues",
+                "source": "https://github.com/spatie/laravel-honeypot/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-09-09T08:26:04+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4873,64 +4942,6 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.3"
             },
             "time": "2020-07-13T06:12:54+00:00"
-        },
-        {
-            "name": "torralbodavid/simple-recaptcha-v3",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/torralbodavid/simple-recaptcha-v3.git",
-                "reference": "2c586123aa125ee7f10e234aba484c6a081afd9b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/torralbodavid/simple-recaptcha-v3/zipball/2c586123aa125ee7f10e234aba484c6a081afd9b",
-                "reference": "2c586123aa125ee7f10e234aba484c6a081afd9b",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^6.6.2|^7.0|^8.0",
-                "php": "^7.3"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^4.0|^5.0|^6.0",
-                "phpunit/phpunit": "^9.3"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Torralbodavid\\SimpleRecaptchaV3\\SimpleRecaptchaV3ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Torralbodavid\\SimpleRecaptchaV3\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Torralbo Pérez",
-                    "email": "davidtorralboperez@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Simple reCAPTCHA v3 integration",
-            "homepage": "https://github.com/torralbodavid/simple-recaptcha-v3",
-            "keywords": [
-                "simple-recaptcha-v3",
-                "torralbodavid"
-            ],
-            "support": {
-                "issues": "https://github.com/torralbodavid/simple-recaptcha-v3/issues",
-                "source": "https://github.com/torralbodavid/simple-recaptcha-v3/tree/v1.3.0"
-            },
-            "time": "2020-09-09T17:37:14+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

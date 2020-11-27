@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Mail\Contact as MailContact;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
@@ -21,10 +22,10 @@ class Contact extends Component
             'text' => 'required|max:500',
         ]);
 
-        Mail::to('davidtorralboperez@gmail.com')->send(new \App\Mail\Contact($this->name, $this->surname, $this->email, $this->text));
+        Mail::to('davidtorralboperez@gmail.com')->send(new MailContact($this->name, $this->surname, $this->email, $this->text));
 
-        session()->flash('title', 'Mensaje enviado correctamente');
-        session()->flash('description', "Le contestaré tan pronto como sea posible 😊.");
+        session()->flash('title', 'Mail sent correctly!');
+        session()->flash('description', "I will reply you as soon as possible 😊.");
 
         return redirect()->to(route('contact'));
     }

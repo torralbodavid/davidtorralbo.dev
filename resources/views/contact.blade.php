@@ -11,10 +11,10 @@
             <div class="lg:pr-8">
                 <div class="max-w-md mx-auto sm:max-w-lg lg:mx-0">
                     <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
-                        Hola, ¿hablamos?
+                        May I help you?
                     </h2>
                     <p class="mt-4 text-lg leading-7 text-gray-500 sm:mt-3">
-                        Escríbeme y te responderé a la mayor brevedad posible 🙂
+                        Get in touch with me!
                     </p>
                     <livewire:contact/>
                 </div>

@@ -18,7 +18,7 @@
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^1.1",
         "themsaid/wink": "1.1.0",
-        "torralbodavid/simple-recaptcha-v3": "^1.2"
+        "spatie/laravel-honeypot": "^2.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.3",
