@@ -19,4 +19,11 @@ class Page extends Component
 
         $this->page = $page;
     }
+
+    public function render()
+    {
+        return view('livewire.page')
+            ->extends('layouts.app')
+            ->section('content');
+    }
 }

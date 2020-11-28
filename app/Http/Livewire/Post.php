@@ -15,4 +15,11 @@ class Post extends Component
 
         $this->post = $post;
     }
+
+    public function render()
+    {
+        return view('livewire.post')
+            ->extends('layouts.app')
+            ->section('content');
+    }
 }

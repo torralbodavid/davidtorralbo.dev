@@ -16,7 +16,7 @@
         "laravel-frontend-presets/tall": "^1.7",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
-        "livewire/livewire": "^1.1",
+        "livewire/livewire": "^2.0",
         "themsaid/wink": "1.2.0",
         "spatie/laravel-honeypot": "^2.3"
     },

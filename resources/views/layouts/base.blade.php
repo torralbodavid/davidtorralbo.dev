@@ -19,7 +19,7 @@
 
         <link rel="canonical" href="{{ Request::url() }}" />
 
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.x/dist/alpine.min.js" defer></script>
     </head>
 
     <body class="bg-body text-body font-body">

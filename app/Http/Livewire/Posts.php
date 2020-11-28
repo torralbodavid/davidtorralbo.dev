@@ -22,6 +22,8 @@ class Posts extends Component
             'posts' => WinkPost::with('tags')->orderByDesc('created_at')->paginate($this->items),
             'items' => $this->items,
             'pagination' => $this->pagination
-        ]);
+        ])
+            ->extends('layouts.app')
+            ->section('content');
     }
 }
