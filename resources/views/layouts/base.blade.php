@@ -10,9 +10,11 @@
             <title>{{ config('app.name') }}</title>
         @endif
 
-        <meta name="description" content="@yield('description')">
+        @hasSection('description')
+            <meta name="description" content="@yield('description')">
+        @endif
 
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @livewireStyles
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -26,6 +28,7 @@
         @yield('body')
 
         <script async defer src="{{ mix('js/app.js') }}"></script>
+        @livewireScripts
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>

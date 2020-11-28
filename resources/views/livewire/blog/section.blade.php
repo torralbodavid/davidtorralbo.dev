@@ -3,7 +3,7 @@
         @if(str_replace('storage/img/', '', $post->featured_image) !== '')
             <div class="flex-shrink-0">
             <a href="{{ route('post', $post->slug) }}">
-                <img class="h-48 w-full object-cover"
+                <img width="414" height="192" class="h-48 w-full object-cover"
                      srcset="{{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 382, 192)->getOriginalName() }} 414w,
                          {{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 512, 192)->getOriginalName() }} 800w,
                          {{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 392, 192)->getOriginalName() }} 1280w"
@@ -17,11 +17,12 @@
             <div class="flex-1">
                 <p class="text-sm leading-5 font-medium text-teal-600">
                     @foreach($post->tags as $tag)
-                        <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
-                            <a href="#" class="hover:underline">
-                                {{ $tag->name }}
-                            </a>
-                        </span>
+                        <a href="#">
+                            <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
+                                    {{ $tag->name }}
+                            </span>
+                        </a>
+
                     @endforeach
                 </p>
                 <a href="{{ route('post', $post->slug) }}" class="block">
