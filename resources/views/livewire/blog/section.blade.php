@@ -1,6 +1,7 @@
 @foreach ($posts as $post)
     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-        <div class="flex-shrink-0">
+        @if(str_replace('storage/img/', '', $post->featured_image) !== '')
+            <div class="flex-shrink-0">
             <a href="{{ route('post', $post->slug) }}">
                 <img class="h-48 w-full object-cover"
                      srcset="{{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 382, 192)->getOriginalName() }} 414w,
@@ -10,6 +11,7 @@
                      alt="{{ $post->title }}">
             </a>
         </div>
+        @endif
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
 
             <div class="flex-1">
