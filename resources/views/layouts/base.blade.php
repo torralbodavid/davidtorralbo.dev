@@ -26,7 +26,6 @@
         @yield('body')
 
         <script async defer src="{{ mix('js/app.js') }}"></script>
-        @livewireScripts
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>
