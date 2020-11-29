@@ -1,3 +1,4 @@
+@section('title', $post->title)
 @if($post->meta['meta_description'] !== null)
     @section('description', $post->meta['meta_description'])
 @endif
