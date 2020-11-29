@@ -14,6 +14,8 @@
             <meta name="description" content="@yield('description')">
         @endif
 
+        @yield('cards')
+
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @livewireStyles
 

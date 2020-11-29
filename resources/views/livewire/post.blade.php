@@ -1,3 +1,20 @@
+@if($post->meta['meta_description'] !== null)
+    @section('description', $post->meta['meta_description'])
+@endif
+@section('cards')
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ $post->meta['opengraph_title'] }}" />
+    <meta property="og:description" content="{{ $post->meta['opengraph_description'] }}" />
+    <meta property="og:image" content="{{ asset($post->meta['opengraph_image']) }}" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@torralbo_" />
+    <meta name="twitter:title" content="{{ $post->meta['twitter_title'] }}" />
+    <meta name="twitter:description" content="{{ $post->meta['twitter_description'] }}" />
+    <meta name="twitter:image" content="{{ asset($post->meta['twitter_image']) }}" />
+@endsection
+
 <article class="relative py-16 bg-white overflow-hidden">
     <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto">
