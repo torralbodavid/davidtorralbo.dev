@@ -1,7 +1,8 @@
 @section('title', $page->title)
 @if($page->meta['meta_description'] !== null)
     @section('description', $page->meta['meta_description'])
-@endif@section('cards')
+@endif
+@section('cards')
     <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ $page->meta['opengraph_title'] }}" />
