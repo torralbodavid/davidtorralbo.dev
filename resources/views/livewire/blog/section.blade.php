@@ -1,17 +1,17 @@
-@if($posts->isNotEmpty())
+@if($posts->total() > 0)
     @foreach ($posts as $post)
     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
         @if(str_replace('storage/img/', '', $post->featured_image) !== '')
             <div class="flex-shrink-0">
-            <a href="{{ route('post', $post->slug) }}">
-                <img width="414" height="192" class="h-48 w-full object-cover"
-                     srcset="{{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 382, 192)->getOriginalName() }} 414w,
+                <a href="{{ route('post', $post->slug) }}">
+                    <img width="414" height="192" class="h-48 w-full object-cover"
+                         srcset="{{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 382, 192)->getOriginalName() }} 414w,
                          {{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 512, 192)->getOriginalName() }} 800w,
                          {{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 392, 192)->getOriginalName() }} 1280w"
-                     src="{{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 414, 192)->getOriginalName() }}"
-                     alt="{{ $post->title }}">
-            </a>
-        </div>
+                         src="{{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 414, 192)->getOriginalName() }}"
+                         alt="{{ $post->title }}">
+                </a>
+            </div>
         @endif
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
 
@@ -19,7 +19,8 @@
                 <p class="text-sm leading-5 font-medium text-teal-600">
                     @foreach($post->tags as $tag)
                         <a href="#">
-                            <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
+                            <span
+                                class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
                                     {{ $tag->name }}
                             </span>
                         </a>
