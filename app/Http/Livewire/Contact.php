@@ -26,8 +26,6 @@ class Contact extends Component
 
         session()->flash('title', 'Mail sent correctly!');
         session()->flash('description', "I will reply you as soon as possible 😊.");
-
-        return redirect()->to(route('contact'));
     }
 
     public function render()
