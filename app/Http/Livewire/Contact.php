@@ -24,6 +24,11 @@ class Contact extends Component
 
         Mail::to('davidtorralboperez@gmail.com')->send(new MailContact($this->name, $this->surname, $this->email, $this->text));
 
+        $this->name = '';
+        $this->surname = '';
+        $this->email = '';
+        $this->text = '';
+
         session()->flash('title', 'Mail sent correctly!');
         session()->flash('description', "I will reply you as soon as possible 😊.");
     }
