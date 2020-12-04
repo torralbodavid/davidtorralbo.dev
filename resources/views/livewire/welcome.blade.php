@@ -7,7 +7,7 @@
             <h1 class="text-4xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
                 Welcome to my
                 <br class="xl:hidden">
-                <span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">blog</span>
+                <span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">blog</span> 🥳
             </h1>
             <p class="mt-3 max-w-md mx-auto text-lg text-gray-200 sm:text-xl md:mt-5 md:max-w-3xl">
                 My name is <span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">David Torralbo</span>,
@@ -48,7 +48,7 @@
                 Check out my GitHub stats!
             </h2>
             <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium.
+                These stats from my <a class="underline" target="_blank" href="https://github.com/torralbodavid">GitHub profile</a> are updated every minute.
             </p>
         </div>
     </div>
@@ -70,7 +70,7 @@
                         <div
                             class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
                             <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-                                stargazers
+                                total stargazers
                             </dt>
                             <dd class="order-1 text-5xl leading-none font-extrabold text-indigo-600">
                                 {{ $stats->stargazers }}
@@ -112,9 +112,7 @@
                 Get in touch with me!
             </h2>
             <p class="mt-3 text-lg leading-7 text-gray-200">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a
-                scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum
-                tincidunt duis.
+                Feel free to contact me through the form you will see when clicking the button below. I will contact you as soon as I can! 😇
             </p>
             <div class="mt-8">
                 <div class="inline-flex rounded-md shadow">
