@@ -3,6 +3,7 @@
 use App\Http\Livewire\Page;
 use App\Http\Livewire\Post;
 use App\Http\Livewire\Posts;
+use App\Http\Livewire\Welcome;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,14 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('/', Welcome::class)->name('home');
 Route::get('/posts', Posts::class)->name('posts');
 Route::get('/post/{slug}', Post::class)->name('post');
 Route::get('/{slug}', Page::class)->name('page');
