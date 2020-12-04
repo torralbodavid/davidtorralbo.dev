@@ -1,4 +1,5 @@
-@foreach ($posts as $post)
+@if($posts->isNotEmpty())
+    @foreach ($posts as $post)
     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
         @if(str_replace('storage/img/', '', $post->featured_image) !== '')
             <div class="flex-shrink-0">
@@ -50,3 +51,4 @@
         </div>
     </div>
 @endforeach
+@endif
