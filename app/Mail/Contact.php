@@ -37,7 +37,7 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->subject("📬 {$this->name} {$this->surname} contacta mitjançant davidtorralbo.dev")->markdown('emails.contact', [
+        return $this->subject("📬 {$this->name} {$this->surname} is contacting through davidtorralbo.dev")->markdown('emails.contact', [
             'name' => $this->name,
             'surname' => $this->surname,
             'email' => $this->email,

@@ -1,5 +1,5 @@
 @component('mail::message')
-    # Nou missatge de {{ $name }}
+    # New message from {{ $name }}
     {{ $email }}
 
     {{ $text }}
