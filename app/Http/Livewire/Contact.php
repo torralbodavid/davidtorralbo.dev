@@ -19,7 +19,7 @@ class Contact extends Component
             'name' => 'required',
             'surname' => 'required',
             'email' => 'required|email',
-            'text' => 'required|max:500',
+            'text' => 'required|max:500|min:10',
         ]);
 
         Mail::to('davidtorralboperez@gmail.com')->send(new MailContact($this->name, $this->surname, $this->email, $this->text));
@@ -32,6 +32,8 @@ class Contact extends Component
 
     public function render()
     {
-        return view('livewire.contact');
+        return view('livewire.contact')
+            ->extends('layouts.app')
+            ->section('content');
     }
 }
