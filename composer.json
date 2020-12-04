@@ -8,15 +8,17 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^7.4",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "gnahotelsolutions/image-cacher": "1.2",
+        "graham-campbell/github": "^9.4",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel-frontend-presets/tall": "^1.7",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^2.0",
+        "php-http/guzzle7-adapter": "0.2.x-dev",
         "spatie/laravel-honeypot": "^2.3",
         "themsaid/wink": "1.2.0"
     },
