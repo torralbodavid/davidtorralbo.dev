@@ -21,5 +21,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', Welcome::class)->name('home');
 Route::get('/contact', Contact::class)->name('contact');
 Route::get('/posts', Posts::class)->name('posts');
+Route::get('/posts/{tag}', Posts::class)->name('posts-tag');
 Route::get('/post/{slug}', Post::class)->name('post');
 Route::get('/{slug}', Page::class)->name('page');

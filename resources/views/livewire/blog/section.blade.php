@@ -18,7 +18,7 @@
             <div class="flex-1">
                 <p class="text-sm leading-5 font-medium text-teal-600">
                     @foreach($post->tags as $tag)
-                        <a href="#">
+                        <a href="{{ route('posts-tag', $tag->slug) }}">
                             <span
                                 class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
                                     {{ $tag->name }}

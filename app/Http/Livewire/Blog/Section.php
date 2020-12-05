@@ -4,7 +4,6 @@ namespace App\Http\Livewire\Blog;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Livewire\Component;
-use Wink\WinkPost;
 
 class Section extends Component
 {
