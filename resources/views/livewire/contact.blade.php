@@ -26,7 +26,7 @@
                     <div>
                         <label for="name" class="block text-sm font-medium leading-5 text-gray-700">Name</label>
                         <div class="mt-1 relative rounded-md shadow-sm">
-                            <input autofocus id="name" wire:model="name"
+                            <input autofocus id="name" wire:model.lazy="name"
                                    class="form-input block w-full transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                         </div>
                     </div>

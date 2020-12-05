@@ -16,18 +16,18 @@
             </p>
             <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                 <div class="rounded-md">
-                        <span class="inline-flex rounded-md shadow-sm">
-                            <form action="{{ route('page', 'acerca-de') }}">
-                              <button aria-label="Sobre mi" type="submit"
-                                 class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
-                                About me
-                                  <svg height="24" width="24" viewBox="0 0 20 20" fill="currentColor"
-                                       class="ml-3 -mr-1 h-5 w-5"><path fill-rule="evenodd"
-                                                                        d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"
-                                                                        clip-rule="evenodd"></path></svg>
-                              </button>
-                            </form>
-                        </span>
+                    <div class="inline-flex rounded-md shadow-sm">
+                        <a href="{{ route('page', 'about-me') }}" aria-label="Sobre mi"
+                           class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+                            About me
+                            <svg height="24" width="24" viewBox="0 0 20 20" fill="currentColor"
+                                 class="ml-3 -mr-1 h-5 w-5">
+                                <path fill-rule="evenodd"
+                                      d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,7 +50,9 @@
                 Check out my GitHub stats!
             </h2>
             <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
-                These stats from my <a rel="noreferrer" class="underline" target="_blank" href="https://github.com/torralbodavid">GitHub profile</a> are updated every minute.
+                These stats from my <a rel="noreferrer" class="underline" target="_blank"
+                                       href="https://github.com/torralbodavid">GitHub profile</a> are updated every
+                minute.
             </p>
         </div>
     </div>
@@ -114,7 +116,8 @@
                 Get in touch with me!
             </h2>
             <p class="mt-3 text-lg leading-7 text-gray-200">
-                Feel free to contact me through the form you will see when clicking the button below. I will contact you as soon as I can! 😇
+                Feel free to contact me through the form you will see when clicking the button below. I will contact you
+                as soon as I can! 😇
             </p>
             <div class="mt-8">
                 <div class="inline-flex rounded-md shadow">

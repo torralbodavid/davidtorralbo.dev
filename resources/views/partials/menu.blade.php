@@ -21,7 +21,7 @@
                     Blog
                 </a>
 
-                <a href="{{ route('page', 'acerca-de') }}"
+                <a href="{{ route('page', 'about-me') }}"
                    class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                     About me
                 </a>
@@ -88,7 +88,7 @@
                                     Blog
                                 </div>
                             </a>
-                            <a href="{{ route('page', 'acerca-de') }}"
+                            <a href="{{ route('page', 'about-me') }}"
                                class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
                                 <svg height="24" width="24" class="flex-shrink-0 h-6 w-6 text-indigo-600" fill="none"
                                      stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
