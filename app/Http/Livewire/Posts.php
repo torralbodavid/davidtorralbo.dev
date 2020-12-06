@@ -33,7 +33,8 @@ class Posts extends Component
         return view('livewire.posts', [
             'posts' => $posts,
             'items' => $this->items,
-            'pagination' => $this->pagination
+            'pagination' => $this->pagination,
+            'page_tag' => WinkTag::where('slug', $this->tag)->first()
         ])
             ->extends('layouts.app')
             ->section('content');

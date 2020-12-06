@@ -1,4 +1,4 @@
-@section('title', $tag === null ? 'The programmer\'s blog' : "{$tag} | The programmer's blog")
+@section('title', $tag === null ? 'The programmer\'s blog' : "{$page_tag->name} | The programmer's blog")
 
 <div class="relative px-4 sm:px-6 lg:px-8 mt-12">
     <div class="inset-0">
@@ -12,14 +12,14 @@
                         class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">blog</span>
                 @else
                     All posts about <span
-                        class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">{{ $tag }}</span>
+                        class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">{{ $page_tag->name }}</span>
                 @endif
             </h1>
             <p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
                 @if($tag === null)
                     Welcome to my blog! Here you will find out all my entries.
                 @else
-                    Here you can find out all posts about <strong>{{ $tag }}</strong>. Feel free to read them!
+                    Here you can find out all posts about <strong>{{ $page_tag->name }}</strong>. Feel free to read them!
                 @endif
             </p>
         </div>
