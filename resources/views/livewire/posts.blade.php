@@ -1,6 +1,5 @@
 @section('title', 'The programmer\'s blog')
-
-<div class="relative px-4 sm:px-6 lg:px-8">
+<div class="relative px-4 sm:px-6 lg:px-8 mt-12">
     <div class="inset-0">
         <div class="bg-white h-1/3 sm:h-2/3"></div>
     </div>

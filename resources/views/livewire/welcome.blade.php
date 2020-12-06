@@ -56,7 +56,7 @@
             </p>
         </div>
     </div>
-    <div class="mt-10 pb-12 bg-white sm:pb-16">
+    <div class="mt-10 pb-6 bg-white sm:pb-6">
         <div class="relative">
             <div class="absolute inset-0 h-1/2 bg-gray-50"></div>
             <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
