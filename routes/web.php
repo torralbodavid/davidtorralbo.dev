@@ -4,7 +4,7 @@ use App\Http\Livewire\Contact;
 use App\Http\Livewire\Page;
 use App\Http\Livewire\Post;
 use App\Http\Livewire\Posts;
-use App\Http\Livewire\Welcome;
+use App\Http\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Welcome::class)->name('home');
+Route::get('/', Home::class)->name('home');
 Route::get('/contact', Contact::class)->name('contact');
 Route::get('/posts', Posts::class)->name('posts');
 Route::get('/posts/{tag}', Posts::class)->name('posts-tag');
