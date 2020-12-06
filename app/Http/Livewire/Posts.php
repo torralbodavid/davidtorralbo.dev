@@ -27,13 +27,13 @@ class Posts extends Component
             ->paginate($this->items);
 
         if($this->tag !== null) {
-            $posts = WinkTag::with('posts.tags')->where('slug', $this->tag)->first()->posts;
+            $posts = WinkTag::with('posts.tags')->where('slug', $this->tag)->first();
 
             if($posts === null) {
                 abort(404);
             }
 
-            $posts = $posts->paginate($posts->count());
+            $posts = $posts->posts->paginate($posts->count());
         }
 
         return view('livewire.posts', [
