@@ -31,6 +31,7 @@
 
         <script async defer src="{{ mix('js/app.js') }}"></script>
         @livewireScripts
+        <script async defer src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false"></script>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>
