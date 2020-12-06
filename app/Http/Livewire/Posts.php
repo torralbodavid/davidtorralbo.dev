@@ -28,6 +28,11 @@ class Posts extends Component
 
         if($this->tag !== null) {
             $posts = WinkTag::with('posts.tags')->where('slug', $this->tag)->first()->posts;
+
+            if($posts === null) {
+                abort(404);
+            }
+
             $posts = $posts->paginate($posts->count());
         }
 
