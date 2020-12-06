@@ -22,6 +22,7 @@ class Posts extends Component
     public function render()
     {
         $posts = WinkPost::with('tags')->where('published', true)
+            ->where('publish_date', '<=', now())
             ->orderByDesc('created_at')
             ->paginate($this->items);
 
