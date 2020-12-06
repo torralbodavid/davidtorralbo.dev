@@ -1,14 +1,14 @@
 @if($posts->total() > 0)
     @foreach ($posts as $post)
     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-        @if(str_replace('storage/img/', '', $post->featured_image) !== '')
+        @if($post->featured_image !== null)
             <div class="flex-shrink-0">
                 <a href="{{ route('post', $post->slug) }}">
                     <img width="414" height="192" class="h-48 w-full object-cover"
-                         srcset="{{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 382, 192)->getOriginalName() }} 414w,
-                         {{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 512, 192)->getOriginalName() }} 800w,
-                         {{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 392, 192)->getOriginalName() }} 1280w"
-                         src="{{ ImageCacher::resize(str_replace('storage/img/', '', $post->featured_image), 414, 192)->getOriginalName() }}"
+                         srcset="{{ ImageCacher::resize($post->featured_image, 382, 192)->getOriginalName() }} 414w,
+                         {{ ImageCacher::resize($post->featured_image, 512, 192)->getOriginalName() }} 800w,
+                         {{ ImageCacher::resize($post->featured_image, 392, 192)->getOriginalName() }} 1280w"
+                         src="{{ ImageCacher::resize($post->featured_image, 414, 192)->getOriginalName() }}"
                          alt="{{ $post->title }}">
                 </a>
             </div>

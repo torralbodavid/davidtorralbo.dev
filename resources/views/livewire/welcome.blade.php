@@ -35,10 +35,10 @@
     <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
         <img width="640" height="678" class="absolute inset-0 w-full h-full object-cover"
              loading="lazy"
-             srcset="{{ ImageCacher::crop('david-torralbo-hero-section.jpg', 414, 256)->getOriginalName() }} 414w,
-                         {{ ImageCacher::crop('david-torralbo-hero-section.jpg', 800, 384)->getOriginalName() }} 800w,
-                         {{ ImageCacher::crop('david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }} 1280w"
-             src="{{ ImageCacher::crop('david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }}"
+             srcset="{{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 414, 256)->getOriginalName() }} 414w,
+                         {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 800, 384)->getOriginalName() }} 800w,
+                         {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }} 1280w"
+             src="{{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }}"
              alt="David Torralbo">
     </div>
 </main>
@@ -101,10 +101,10 @@
     <div class="h-56 bg-teal-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img width="1280" height="406" class="w-full h-full object-cover"
              loading="lazy"
-             srcset="{{ ImageCacher::crop('estany-de-banyoles.jpg', 414, 224)->getOriginalName() }} 414w,
-                         {{ ImageCacher::crop('estany-de-banyoles.jpg', 400, 498)->getOriginalName() }} 800w,
-                         {{ ImageCacher::crop('estany-de-banyoles.jpg', 640, 406)->getOriginalName() }} 1280w"
-             src="{{ ImageCacher::crop('estany-de-banyoles.jpg', 1280, 406)->getOriginalName() }}"
+             srcset="{{ ImageCacher::crop('storage/img/estany-de-banyoles.jpg', 414, 224)->getOriginalName() }} 414w,
+                         {{ ImageCacher::crop('storage/img/estany-de-banyoles.jpg', 400, 498)->getOriginalName() }} 800w,
+                         {{ ImageCacher::crop('storage/img/estany-de-banyoles.jpg', 640, 406)->getOriginalName() }} 1280w"
+             src="{{ ImageCacher::crop('storage/img/estany-de-banyoles.jpg', 1280, 406)->getOriginalName() }}"
              alt="Estany de Banyoles">
     </div>
     <div class="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">

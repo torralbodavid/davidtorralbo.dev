@@ -2,7 +2,7 @@
     <div class="lg:absolute lg:inset-0">
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img class="h-56 w-full object-cover lg:absolute lg:h-full"
-                 src="{{ ImageCacher::resize('pesquera-estany-de-banyoles.jpg', 1280, null)->getOriginalName() }}"
+                 src="{{ ImageCacher::resize('storage/img/pesquera-estany-de-banyoles.jpg', 1280, null)->getOriginalName() }}"
                  alt="Pesquera Estany de Banyoles">
         </div>
     </div>

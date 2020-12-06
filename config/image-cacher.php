@@ -49,7 +49,7 @@ return [
     |
     */
 
-    'images_root_path' => 'storage/img',
+    'images_root_path' => public_path(),
 
     /*
    |--------------------------------------------------------------------------
