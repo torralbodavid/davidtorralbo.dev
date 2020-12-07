@@ -1,2 +1,4 @@
-User-agent: *
+User-Agent: *
 Disallow:
+
+Sitemap: https://davidtorralbo.dev/sitemap.xml
