@@ -50,8 +50,8 @@
                 Check out my GitHub stats!
             </h2>
             <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
-                These stats from my <a rel="noreferrer" class="underline" target="_blank"
-                                       href="https://github.com/torralbodavid">GitHub profile</a> are updated every
+                These stats from my <a rel="noreferrer" target="_blank"
+                                       href="https://github.com/torralbodavid"><span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">GitHub profile</span></a> are updated every
                 minute.
             </p>
         </div>
