@@ -5,10 +5,10 @@
             <div class="flex-shrink-0">
                 <a href="{{ route('post', $post->slug) }}">
                     <img width="414" height="192" class="h-48 w-full object-cover"
-                         srcset="{{ asset(ImageCacher::resize($post->featured_image, 382, 192)->getOriginalName()) }} 414w,
-                         {{ asset(ImageCacher::resize($post->featured_image, 512, 192)->getOriginalName()) }} 800w,
-                         {{ asset(ImageCacher::resize($post->featured_image, 392, 192)->getOriginalName()) }} 1280w"
-                         src="{{ asset(ImageCacher::resize($post->featured_image, 414, 192)->getOriginalName()) }}"
+                         srcset="{{ asset(ImageCacher::crop($post->featured_image, 382, 192)->getOriginalName()) }} 414w,
+                         {{ asset(ImageCacher::crop($post->featured_image, 512, 192)->getOriginalName()) }} 800w,
+                         {{ asset(ImageCacher::crop($post->featured_image, 392, 192)->getOriginalName()) }} 1280w"
+                         src="{{ asset(ImageCacher::crop($post->featured_image, 414, 192)->getOriginalName()) }}"
                          alt="{{ $post->title }}">
                 </a>
             </div>
