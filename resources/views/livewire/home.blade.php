@@ -115,7 +115,7 @@
                 Get in touch with me!
             </h2>
             <p class="mt-3 text-lg leading-7 text-gray-200">
-                Feel free to contact me through the form you will see when clicking the button below. I will contact you
+                If you have any question, doubt or do you think I can help you with something, feel free to contact me through the form you will see when clicking the button below. I will write to you
                 as soon as I can! 😇
             </p>
             <div class="mt-8">
