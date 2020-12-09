@@ -11,8 +11,8 @@
             </h1>
             <p class="mt-3 max-w-md mx-auto text-lg text-gray-200 sm:text-xl md:mt-5 md:max-w-3xl">
                 My name is <span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">David Torralbo</span>,
-                I'm {{ \Carbon\Carbon::parse('1997-10-30')->age }} years old and I'm Backend Developer at
-                <a rel="noreferrer" href="https://www.gnahs.com" class="underline">GNA Hotel Solutions</a> since 2017.
+                I'm {{ \Carbon\Carbon::parse('1997-10-30')->age }} years old and I'm a Backend Developer from Girona, Banyoles at
+                <a rel="noreferrer" href="https://www.gnahs.com" class="underline">GNA Hotel Solutions</a> since 2017. <br><br> I am an open source contributor with currently {{ $stats->repositories }} repositories at GitHub. I develop in PHP but I also used to develop with Java, so you can also check out my old open sourced Java projects there.
             </p>
             <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
                 <div class="rounded-md">
@@ -35,10 +35,10 @@
     <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
         <img width="640" height="678" class="absolute inset-0 w-full h-full object-cover"
              loading="lazy"
-             srcset="{{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 414, 256)->getOriginalName() }} 414w,
-                         {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 800, 384)->getOriginalName() }} 800w,
-                         {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }} 1280w"
-             src="{{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 640, 678)->getOriginalName() }}"
+             srcset="{{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 414, null)->getOriginalName() }} 414w,
+                         {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 800, null)->getOriginalName() }} 800w,
+                         {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 640, null)->getOriginalName() }} 1280w"
+             src="{{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 640, null)->getOriginalName() }}"
              alt="David Torralbo">
     </div>
 </main>
