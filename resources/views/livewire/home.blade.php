@@ -46,12 +46,12 @@
 <div class="bg-gray-50 pt-12 sm:pt-16">
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl leading-9 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 sm:text-4xl sm:leading-10">
-                Check out my GitHub stats!
+            <h2 class="text-3xl leading-9 font-extrabold sm:text-4xl sm:leading-10">
+                Check out my <span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">GitHub stats</span>!
             </h2>
             <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
                 These stats from my <a rel="noreferrer" target="_blank"
-                                       href="https://github.com/torralbodavid"><span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">GitHub profile</span></a> are updated every
+                                       href="https://github.com/torralbodavid"><span class="underline">GitHub profile</span></a> are updated every
                 minute.
             </p>
         </div>
@@ -66,7 +66,7 @@
                             <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500" id="item-1">
                                 repositories
                             </dt>
-                            <dd class="order-1 text-5xl leading-none font-extrabold text-indigo-600"
+                            <dd class="order-1 text-5xl leading-none font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-purple-500 to-blue-700"
                                 aria-describedby="item-1">
                                 {{ $stats->repositories }}
                             </dd>
@@ -76,7 +76,7 @@
                             <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                                 total stargazers
                             </dt>
-                            <dd class="order-1 text-5xl leading-none font-extrabold text-indigo-600">
+                            <dd class="order-1 text-5xl leading-none font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-purple-500 to-blue-700">
                                 {{ $stats->stargazers }}
                             </dd>
                         </div>
@@ -84,7 +84,7 @@
                             <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                                 contributions (this year)
                             </dt>
-                            <dd class="order-1 text-5xl leading-none font-extrabold text-indigo-600">
+                            <dd class="order-1 text-5xl leading-none font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-purple-500 to-blue-700">
                                 {{ $stats->contributions }}
                             </dd>
                         </div>
