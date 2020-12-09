@@ -8,8 +8,8 @@
         <div class="text-center">
             <h1 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
                 @if($tag === null)
-                    The best of the <span
-                        class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">blog</span>
+                    David Torralbo's <span
+                        class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">blog</span> posts
                 @else
                     All posts about <span
                         class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">{{ $page_tag->name }}</span>
@@ -17,7 +17,7 @@
             </h1>
             <p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
                 @if($tag === null)
-                    Welcome to my blog! Here you will find out all my entries.
+                    I'm going to take advantage of this space on the internet to share all the knowledge I can about tech, as well as gain as much experience as I can.
                 @else
                     Here you can find out all posts about <strong>{{ $page_tag->name }}</strong>. Feel free to read them!
                 @endif

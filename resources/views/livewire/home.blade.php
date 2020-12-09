@@ -49,10 +49,9 @@
             <h2 class="text-3xl leading-9 font-extrabold sm:text-4xl sm:leading-10">
                 Check out my <span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">GitHub stats</span>!
             </h2>
-            <p class="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
-                These stats from my <a rel="noreferrer" target="_blank"
-                                       href="https://github.com/torralbodavid"><span class="underline">GitHub profile</span></a> are updated every
-                minute.
+            <p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
+                Contributing to open source can be an excellent way to learn, teach, and build experience. I usually contribute to open source, and here you can see the stats from my <a rel="noreferrer" target="_blank"
+                                       href="https://github.com/torralbodavid"><span class="underline">GitHub profile</span></a>.
             </p>
         </div>
     </div>
