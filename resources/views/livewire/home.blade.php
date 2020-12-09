@@ -1,5 +1,5 @@
 @section('title', 'Developer')
-@section('description', 'Backend developer from Girona, Spain')
+@section('description', 'Backend developer from Banyoles, Girona')
 
 <main class="bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 lg:relative">
     <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
