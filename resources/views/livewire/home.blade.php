@@ -4,11 +4,11 @@
 <main class="bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 lg:relative">
     <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
         <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-            <h1 class="text-4xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
+            <{{ Route::currentRouteName() !== 'home' ? 'h1' : 'h2' }} class="text-4xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
                 Welcome to my
                 <br class="xl:hidden">
                 <span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">blog</span> 🥳
-            </h1>
+            </{{ Route::currentRouteName() !== 'home' ? 'h1' : 'h2' }}>
             <p class="mt-3 max-w-md mx-auto text-lg text-gray-200 sm:text-xl md:mt-5 md:max-w-3xl">
                 My name is <span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">David Torralbo</span>,
                 I'm {{ \Carbon\Carbon::parse('1997-10-30')->age }} years old and I'm a Backend Developer from Girona, Banyoles at
