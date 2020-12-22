@@ -27,9 +27,7 @@ class Posts extends Component
             ->paginate($this->items);
 
         if($this->tag !== null) {
-            $posts = WinkTag::with('posts.tags')->where('slug', $this->tag)
-                ->where('publish_date', '<=', now())
-                ->orderByDesc('created_at')->first();
+            $posts = WinkTag::with('posts.tags')->where('slug', $this->tag)->first();
 
             if($posts === null) {
                 abort(404);
