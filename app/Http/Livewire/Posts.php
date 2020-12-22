@@ -35,7 +35,7 @@ class Posts extends Component
 
             $posts = $posts->posts->where('published', true)
                 ->where('publish_date', '<=', now())
-                ->orderByDesc('created_at')->paginate($posts->count());
+                ->sortByDesc('created_at')->paginate($posts->count());
         }
 
         return view('livewire.posts', [
