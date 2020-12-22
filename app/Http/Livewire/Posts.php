@@ -33,7 +33,9 @@ class Posts extends Component
                 abort(404);
             }
 
-            $posts = $posts->posts->paginate($posts->count());
+            $posts = $posts->posts->where('published', true)
+                ->where('publish_date', '<=', now())
+                ->orderByDesc('created_at')->paginate($posts->count());
         }
 
         return view('livewire.posts', [
