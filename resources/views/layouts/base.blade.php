@@ -55,7 +55,7 @@
     <body class="bg-body text-body font-body">
         @yield('body')
 
-        @livewireScripts
+        <script src="{{ asset('vendor/livewire/livewire.js') }}" defer></script>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>
