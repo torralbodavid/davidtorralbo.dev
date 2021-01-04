@@ -51,11 +51,17 @@
         @endif
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-L23C2SCP7M"></script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            if(navigator.userAgent.indexOf("Speed Insights") === -1) {
+                window.dataLayer = window.dataLayer || [];
 
-            gtag('config', 'G-L23C2SCP7M', {cookie_flags: 'SameSite=None;Secure'});
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                gtag('js', new Date());
+
+                gtag('config', 'G-L23C2SCP7M', {cookie_flags: 'SameSite=None;Secure'});
+            }
         </script>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
