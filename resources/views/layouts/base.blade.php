@@ -48,13 +48,12 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <link rel="canonical" href="{{ Request::url() }}" />
-
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.x/dist/alpine.min.js" defer></script>
     </head>
 
     <body class="bg-body text-body font-body">
         @yield('body')
 
+        <script async defer src="{{ mix('js/app.js') }}"></script>
         @livewireScripts
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
