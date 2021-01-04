@@ -42,7 +42,7 @@
 
         @yield('cards')
 
-        <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @livewireStyles
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -58,6 +58,6 @@
         @if(Request::route()->getName() !== 'home')
             @livewireScripts
         @endif
-        <link rel="preload" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>
