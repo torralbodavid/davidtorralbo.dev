@@ -36,7 +36,7 @@
         <img width="640" height="678" class="absolute inset-0 w-full h-full object-cover"
              loading="lazy"
              srcset="{{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 414, null)->getOriginalName() }} 600w,
-                         {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 800, null)->getOriginalName() }} 800w,
+                         {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 414, null)->getOriginalName() }} 800w,
                          {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 640, null)->getOriginalName() }} 1280w"
              src="{{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 640, null)->getOriginalName() }}"
              alt="David Torralbo">
