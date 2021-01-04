@@ -27,7 +27,7 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-L23C2SCP7M');
+            gtag('config', 'G-L23C2SCP7M', {cookie_flags: 'SameSite=None;Secure'});
         </script>
 
         @hasSection('title')
