@@ -20,7 +20,15 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="{{ asset('favicons/ms-icon-144x144.png') }}">
         <meta name="theme-color" content="#ffffff">
-        
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L23C2SCP7M"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-L23C2SCP7M', {cookie_flags: 'SameSite=None;Secure'});
+        </script>
 
         @hasSection('title')
             <title>@yield('title') - {{ config('app.name') }}</title>
@@ -47,7 +55,9 @@
     <body class="bg-body text-body font-body">
         @yield('body')
 
-        @livewireScripts
+        @if(Request::route()->getName() !== 'home')
+            @livewireScripts
+        @endif
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>
