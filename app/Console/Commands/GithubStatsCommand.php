@@ -23,6 +23,7 @@ class GithubStatsCommand extends Command
     {
         parent::__construct();
 
+        $this->stats = collect();
         $this->currentUser = GitHub::me();
         $this->graphQL = GitHub::graphql();
     }
