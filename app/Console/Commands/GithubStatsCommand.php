@@ -17,7 +17,7 @@ class GithubStatsCommand extends Command
 
     private CurrentUser $currentUser;
     private GraphQL $graphQL;
-    private $stats;
+    private Collection $stats;
 
     public function __construct()
     {
