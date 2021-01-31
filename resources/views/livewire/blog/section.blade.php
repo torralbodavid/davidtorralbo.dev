@@ -38,9 +38,9 @@
             </div>
             <div class="mt-6 flex items-center">
                 <div class="flex text-sm leading-5 text-gray-500">
-                    <time datetime="{{ $post->publish_date->format('Y-m-d') }}">
+                    <span title="{{ $post->publish_date->format('Y-m-d') }}">
                         {{ $post->publish_date->diffForHumans() }}
-                    </time>
+                    </span>
                 </div>
             </div>
         </div>

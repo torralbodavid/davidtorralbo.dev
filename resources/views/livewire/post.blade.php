@@ -57,7 +57,7 @@
                 @php
                     $created = \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->publish_date);
                 @endphp
-                <span class="text-base leading-6 font-semibold text-indigo-600 tracking-wide uppercase" title="{{ $created->format('d-m-Y H:i') }}">Published {{ $created->diffForHumans() }}</span>
+                <time datetime="{{ $post->publish_date->format('Y-m-d') }}" class="text-base leading-6 font-semibold text-indigo-600 tracking-wide uppercase" title="{{ $created->format('d-m-Y H:i') }}">Published {{ $created->diffForHumans() }}</time>
                 <h1 class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">{{ $post->title }}</h1>
                 <p class="max-w-xl mt-5 mx-auto text-xl leading-7 text-gray-500">{{ $post->excerpt }}</p>
             </div>
