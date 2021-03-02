@@ -1,5 +1,5 @@
-@section('title', 'Developer')
-@section('description', 'Backend developer from Banyoles, Girona')
+@section('title', 'Developer in Banyoles, Girona')
+@section('description', 'Back-End Developer in Banyoles, Girona')
 
 <main class="bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 lg:relative">
     <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
@@ -11,7 +11,7 @@
             </{{ Route::currentRouteName() !== 'home' ? 'h1' : 'h2' }}>
             <p class="mt-3 max-w-md mx-auto text-lg text-gray-200 sm:text-xl md:mt-5 md:max-w-3xl">
                 My name is <span class="text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500">David Torralbo</span>,
-                I'm {{ \Carbon\Carbon::parse('1997-10-30')->age }} years old and I'm a Backend Developer from Girona, Banyoles. I work at
+                I'm {{ \Carbon\Carbon::parse('1997-10-30')->age }} years old and I'm a Backend Developer from Banyoles, Girona. I work at
                 <a rel="noreferrer" target="_blank" href="https://www.gnahs.com" class="underline">GNA Hotel Solutions</a> since 2017. <br><br> I am an open source contributor with currently {{ $stats->repositories }} repositories at GitHub.
             </p>
             <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
