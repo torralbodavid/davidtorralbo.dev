@@ -33,7 +33,6 @@
 
         @yield('cards')
 
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @livewireStyles
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -67,6 +66,7 @@
                 gtag('config', 'G-L23C2SCP7M', {cookie_flags: 'SameSite=None;Secure'});
             });
         </script>
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>
