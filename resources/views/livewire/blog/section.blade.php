@@ -4,7 +4,9 @@
         @if($post->featured_image !== null)
             <div class="flex-shrink-0">
                 <a href="{{ route('post', $post->slug) }}">
-                    <img width="414" height="192" class="h-48 w-full object-cover"
+                    <img
+                        loading="lazy"
+                        width="414" height="192" class="h-48 w-full object-cover"
                          srcset="{{ asset(ImageCacher::crop($post->featured_image, 382, null)->getOriginalName()) }} 414w,
                          {{ asset(ImageCacher::crop($post->featured_image, 512, null)->getOriginalName()) }} 800w,
                          {{ asset(ImageCacher::crop($post->featured_image, 392, null)->getOriginalName()) }} 1280w"
