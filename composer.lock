@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6908a1051830110fe64361d952beaa20",
+    "content-hash": "8d6e25586b75896c455b0af36e0ae924",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3279,16 +3279,16 @@
         },
         {
             "name": "spatie/laravel-honeypot",
-            "version": "v4.x-dev",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-honeypot.git",
-                "reference": "07f794d0a78cfdc1e1661fa3d94c4a4f6c77b5a9"
+                "reference": "e13ee4ee3225313f18191c51fdd28f75075c69c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-honeypot/zipball/07f794d0a78cfdc1e1661fa3d94c4a4f6c77b5a9",
-                "reference": "07f794d0a78cfdc1e1661fa3d94c4a4f6c77b5a9",
+                "url": "https://api.github.com/repos/spatie/laravel-honeypot/zipball/e13ee4ee3225313f18191c51fdd28f75075c69c0",
+                "reference": "e13ee4ee3225313f18191c51fdd28f75075c69c0",
                 "shasum": ""
             },
             "require": {
@@ -3340,7 +3340,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-honeypot/issues",
-                "source": "https://github.com/spatie/laravel-honeypot/tree/v4"
+                "source": "https://github.com/spatie/laravel-honeypot/tree/4.0.0"
             },
             "funding": [
                 {
@@ -3348,7 +3348,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-04-13T17:49:57+00:00"
+            "time": "2021-04-13T17:50:21+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
@@ -3472,16 +3472,16 @@
         },
         {
             "name": "spiral/roadrunner",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spiral/roadrunner.git",
-                "reference": "bf28e244848b21709e142cd5e2fe07953e878f21"
+                "reference": "e1ff9daead5033b537296ffb071e551b95af91ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spiral/roadrunner/zipball/bf28e244848b21709e142cd5e2fe07953e878f21",
-                "reference": "bf28e244848b21709e142cd5e2fe07953e878f21",
+                "url": "https://api.github.com/repos/spiral/roadrunner/zipball/e1ff9daead5033b537296ffb071e551b95af91ab",
+                "reference": "e1ff9daead5033b537296ffb071e551b95af91ab",
                 "shasum": ""
             },
             "require": {
@@ -3507,9 +3507,9 @@
             "description": "RoadRunner: High-performance PHP application server, load-balancer and process manager written in Golang",
             "support": {
                 "issues": "https://github.com/spiral/roadrunner/issues",
-                "source": "https://github.com/spiral/roadrunner/tree/v2.2.0"
+                "source": "https://github.com/spiral/roadrunner/tree/v2.2.1"
             },
-            "time": "2021-05-12T17:23:21+00:00"
+            "time": "2021-05-13T17:15:00+00:00"
         },
         {
             "name": "spiral/roadrunner-cli",
@@ -3785,12 +3785,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "cbb69227421d7050e0525c96122c7f39c4e3c4fb"
+                "reference": "e84aab170bab4df0445d6c104a197a89df087ed7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/cbb69227421d7050e0525c96122c7f39c4e3c4fb",
-                "reference": "cbb69227421d7050e0525c96122c7f39c4e3c4fb",
+                "url": "https://api.github.com/repos/symfony/console/zipball/e84aab170bab4df0445d6c104a197a89df087ed7",
+                "reference": "e84aab170bab4df0445d6c104a197a89df087ed7",
                 "shasum": ""
             },
             "require": {
@@ -3860,7 +3860,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.3.0-BETA4"
+                "source": "https://github.com/symfony/console/tree/5.x"
             },
             "funding": [
                 {
@@ -3876,7 +3876,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-11T16:08:00+00:00"
+            "time": "2021-05-13T09:45:23+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -6490,12 +6490,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "6a4bf30a965447268aa23bc4b2456e021762134a"
+                "reference": "fb5383132f3775cfcf859e4c77b74427d0158d9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/6a4bf30a965447268aa23bc4b2456e021762134a",
-                "reference": "6a4bf30a965447268aa23bc4b2456e021762134a",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/fb5383132f3775cfcf859e4c77b74427d0158d9b",
+                "reference": "fb5383132f3775cfcf859e4c77b74427d0158d9b",
                 "shasum": ""
             },
             "require": {
@@ -6556,7 +6556,7 @@
             ],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-debugbar/issues",
-                "source": "https://github.com/barryvdh/laravel-debugbar/tree/master"
+                "source": "https://github.com/barryvdh/laravel-debugbar/tree/V3.5.6"
             },
             "funding": [
                 {
@@ -6564,7 +6564,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-12T20:59:24+00:00"
+            "time": "2021-05-13T07:04:33+00:00"
         },
         {
             "name": "beyondcode/laravel-query-detector",
