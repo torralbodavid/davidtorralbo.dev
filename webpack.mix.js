@@ -14,6 +14,7 @@ require("laravel-mix-tailwind");
  */
 
 mix.sass("resources/sass/app.scss", "public/css/app.css")
+    .sass("resources/sass/post.scss", "public/css/post.css")
     .tailwind("./tailwind.config.js")
     .sourceMaps();
 
