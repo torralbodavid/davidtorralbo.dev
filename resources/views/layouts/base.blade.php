@@ -49,7 +49,6 @@
         @if(Request::route()->getName() !== 'home')
             @livewireScripts
         @endif
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", function(e) {
                 var script = document.createElement('script');
@@ -68,5 +67,6 @@
                 gtag('config', 'G-L23C2SCP7M', {cookie_flags: 'SameSite=None;Secure'});
             });
         </script>
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>
