@@ -13,10 +13,12 @@ require("laravel-mix-tailwind");
  |
  */
 
-mix.sass("resources/sass/app.scss", "public/css/app.css")
-    .sass("resources/sass/post.scss", "public/css/post.css")
-    .tailwind("./tailwind.config.js")
-    .sourceMaps();
+mix.js('resources/js/app.js', 'public/js')
+    .postCss('resources/css/app.css', 'public/css', [
+        require('postcss-import'),
+        require('tailwindcss'),
+        require('autoprefixer'),
+    ]);
 
 if (mix.inProduction()) {
     mix.version();
