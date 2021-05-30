@@ -3887,12 +3887,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "447944da2e7b5654b91f324e7aa7574f8ef39d32"
+                "reference": "e3a55cd1ced2fa4e278eb20a880b1a6ccb8890c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/447944da2e7b5654b91f324e7aa7574f8ef39d32",
-                "reference": "447944da2e7b5654b91f324e7aa7574f8ef39d32",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/e3a55cd1ced2fa4e278eb20a880b1a6ccb8890c9",
+                "reference": "e3a55cd1ced2fa4e278eb20a880b1a6ccb8890c9",
                 "shasum": ""
             },
             "require": {
@@ -3944,7 +3944,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-19T13:35:00+00:00"
+            "time": "2021-05-28T15:52:26+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -5814,12 +5814,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "b995c211729a96e0aec4d5e67219a0d38a6f1793"
+                "reference": "6af24b577b18038efe420359394f6c3e01c8947d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/b995c211729a96e0aec4d5e67219a0d38a6f1793",
-                "reference": "b995c211729a96e0aec4d5e67219a0d38a6f1793",
+                "url": "https://api.github.com/repos/symfony/string/zipball/6af24b577b18038efe420359394f6c3e01c8947d",
+                "reference": "6af24b577b18038efe420359394f6c3e01c8947d",
                 "shasum": ""
             },
             "require": {
@@ -5888,7 +5888,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-28T08:10:10+00:00"
+            "time": "2021-05-28T15:52:26+00:00"
         },
         {
             "name": "symfony/translation",
@@ -7893,12 +7893,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "305d867015899a9f5aa08d3a21f3864306baa26c"
+                "reference": "cb1e58570c1935718a7199fcd92c04d6d2e29318"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/305d867015899a9f5aa08d3a21f3864306baa26c",
-                "reference": "305d867015899a9f5aa08d3a21f3864306baa26c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/cb1e58570c1935718a7199fcd92c04d6d2e29318",
+                "reference": "cb1e58570c1935718a7199fcd92c04d6d2e29318",
                 "shasum": ""
             },
             "require": {
@@ -7988,7 +7988,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-26T08:44:16+00:00"
+            "time": "2021-05-30T06:27:57+00:00"
         },
         {
             "name": "sebastian/cli-parser",
