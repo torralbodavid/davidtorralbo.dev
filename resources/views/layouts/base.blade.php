@@ -33,7 +33,9 @@
 
         @yield('cards')
 
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/index_critical.min.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}" media="print" onload="this.media='all'">
+
         @livewireStyles
 
         <meta name="csrf-token" content="{{ csrf_token() }}">

@@ -1,6 +1,7 @@
 const mix = require("laravel-mix");
 
 require("laravel-mix-tailwind");
+require('laravel-mix-critical');
 
 /*
  |--------------------------------------------------------------------------
@@ -18,7 +19,16 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
         require('autoprefixer'),
-    ]);
+    ])
+    .critical({
+        enabled: mix.inProduction(),
+        urls: [
+            { src: 'https://davidtorralbo.dev.test/', dest: 'public/css/index_critical.min.css' },
+        ],
+        options: {
+            minify: true,
+        },
+    });
 
 if (mix.inProduction()) {
     mix.version();
