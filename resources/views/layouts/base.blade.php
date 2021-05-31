@@ -34,6 +34,9 @@
         @yield('cards')
 
         <link rel="stylesheet" href="{{ mix('css/index_critical.min.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}" media="print" onload="this.media='all';this.onload=null;" />
+        <noscript><link rel="stylesheet" href="{{ mix('css/app.css') }}" ></noscript>
+
         @livewireStyles
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -67,8 +70,6 @@
                 gtag('config', 'G-L23C2SCP7M', {cookie_flags: 'SameSite=None;Secure'});
             });
         </script>
-        <link rel="preload" href="{{ mix('css/app.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="{{ mix('css/app.css') }}"></noscript>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>
