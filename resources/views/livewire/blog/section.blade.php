@@ -30,9 +30,9 @@
                     @endforeach
                 </p>
                 <a href="{{ route('post', $post->slug) }}" class="block">
-                    <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    <h2 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
                         {{ $post->title }}
-                    </h3>
+                    </h2>
                     <p class="mt-3 text-base leading-6 text-gray-500">
                         {{ $post->excerpt }}
                     </p>
