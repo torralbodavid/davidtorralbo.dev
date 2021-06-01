@@ -36,8 +36,6 @@
         <style type="text/css">
             {!! file_get_contents(asset('css/critical.min.css')) !!}
         </style>
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}" media="print" onload="this.media='all';this.onload=null;" />
-        <noscript><link rel="stylesheet" href="{{ mix('css/app.css') }}" ></noscript>
 
         @livewireStyles
 
@@ -72,6 +70,8 @@
                 gtag('config', 'G-L23C2SCP7M', {cookie_flags: 'SameSite=None;Secure'});
             });
         </script>
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}" media="print" onload="this.media='all';this.onload=null;" />
+        <noscript><link rel="stylesheet" href="{{ mix('css/app.css') }}" ></noscript>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
     </body>
 </html>
