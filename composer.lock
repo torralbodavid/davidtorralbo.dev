@@ -1291,12 +1291,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "f8c8be14d1230e2e7508648ebd01992f9276b2fd"
+                "reference": "71a83fbe9335e81d38616ef78c46ee865e872ff0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/f8c8be14d1230e2e7508648ebd01992f9276b2fd",
-                "reference": "f8c8be14d1230e2e7508648ebd01992f9276b2fd",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/71a83fbe9335e81d38616ef78c46ee865e872ff0",
+                "reference": "71a83fbe9335e81d38616ef78c46ee865e872ff0",
                 "shasum": ""
             },
             "require": {
@@ -1378,7 +1378,7 @@
                 "orchestra/testbench-core": "^6.8",
                 "pda/pheanstalk": "^4.0",
                 "phpunit/phpunit": "^8.5.8|^9.3.3",
-                "predis/predis": "^1.1.1",
+                "predis/predis": "^1.1.2",
                 "symfony/cache": "^5.1.4"
             },
             "suggest": {
@@ -1452,7 +1452,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-05-28T15:32:59+00:00"
+            "time": "2021-06-01T14:53:38+00:00"
         },
         {
             "name": "laravel/octane",
@@ -2157,12 +2157,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "210cc733e1004fc4fb2ab2f9ee8503e54a8f6ead"
+                "reference": "f76be89d78799edc20c832106338dab1aa814072"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/210cc733e1004fc4fb2ab2f9ee8503e54a8f6ead",
-                "reference": "210cc733e1004fc4fb2ab2f9ee8503e54a8f6ead",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f76be89d78799edc20c832106338dab1aa814072",
+                "reference": "f76be89d78799edc20c832106338dab1aa814072",
                 "shasum": ""
             },
             "require": {
@@ -2243,7 +2243,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-27T17:18:37+00:00"
+            "time": "2021-06-01T10:23:06+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3520,12 +3520,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spiral/roadrunner-cli.git",
-                "reference": "d75a3257ad474dbf4c421813ee3201d771c3e3e5"
+                "reference": "42c03687f8c183d36e5bc73f43782a7d2b3ca155"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spiral/roadrunner-cli/zipball/d75a3257ad474dbf4c421813ee3201d771c3e3e5",
-                "reference": "d75a3257ad474dbf4c421813ee3201d771c3e3e5",
+                "url": "https://api.github.com/repos/spiral/roadrunner-cli/zipball/42c03687f8c183d36e5bc73f43782a7d2b3ca155",
+                "reference": "42c03687f8c183d36e5bc73f43782a7d2b3ca155",
                 "shasum": ""
             },
             "require": {
@@ -3574,9 +3574,9 @@
             "description": "RoadRunner: Command Line Interface",
             "support": {
                 "issues": "https://github.com/spiral/roadrunner-cli/issues",
-                "source": "https://github.com/spiral/roadrunner-cli/tree/v2.0.5"
+                "source": "https://github.com/spiral/roadrunner-cli/tree/v2.0.6"
             },
-            "time": "2021-05-25T19:57:07+00:00"
+            "time": "2021-06-01T10:04:14+00:00"
         },
         {
             "name": "spiral/roadrunner-http",
@@ -4556,12 +4556,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "2a6c5ddf2d21ba734c303f4c080f942bbe5de299"
+                "reference": "709e5a5cd1d309191fa4848d1c4d2e8f55e01321"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/2a6c5ddf2d21ba734c303f4c080f942bbe5de299",
-                "reference": "2a6c5ddf2d21ba734c303f4c080f942bbe5de299",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/709e5a5cd1d309191fa4848d1c4d2e8f55e01321",
+                "reference": "709e5a5cd1d309191fa4848d1c4d2e8f55e01321",
                 "shasum": ""
             },
             "require": {
@@ -4618,7 +4618,6 @@
                 "symfony/console": "",
                 "symfony/dependency-injection": ""
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -4661,7 +4660,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-27T13:36:38+00:00"
+            "time": "2021-06-01T09:09:46+00:00"
         },
         {
             "name": "symfony/mime",
@@ -5530,7 +5529,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/5.2"
+                "source": "https://github.com/symfony/process/tree/v5.3.0"
             },
             "funding": [
                 {
@@ -6532,16 +6531,16 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "dev-master",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "88fd9cfa144b06b2549e9d487fdaec68265e791e"
+                "reference": "bc99f4c52aec0636ecb3aae4576ce84c5773bae2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/88fd9cfa144b06b2549e9d487fdaec68265e791e",
-                "reference": "88fd9cfa144b06b2549e9d487fdaec68265e791e",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/bc99f4c52aec0636ecb3aae4576ce84c5773bae2",
+                "reference": "bc99f4c52aec0636ecb3aae4576ce84c5773bae2",
                 "shasum": ""
             },
             "require": {
@@ -6559,7 +6558,6 @@
                 "phpunit/phpunit": "^8.5|^9.0",
                 "squizlabs/php_codesniffer": "^3.5"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -6602,7 +6600,7 @@
             ],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-debugbar/issues",
-                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.5.7"
+                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.6.0"
             },
             "funding": [
                 {
@@ -6610,7 +6608,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-13T20:18:35+00:00"
+            "time": "2021-06-01T08:46:17+00:00"
         },
         {
             "name": "beyondcode/laravel-query-detector",
@@ -6743,16 +6741,16 @@
         },
         {
             "name": "facade/flare-client-php",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/flare-client-php.git",
-                "reference": "69742118c037f34ee1ef86dc605be4a105d9e984"
+                "reference": "47b639dc02bcfdfc4ebb83de703856fa01e35f5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/flare-client-php/zipball/69742118c037f34ee1ef86dc605be4a105d9e984",
-                "reference": "69742118c037f34ee1ef86dc605be4a105d9e984",
+                "url": "https://api.github.com/repos/facade/flare-client-php/zipball/47b639dc02bcfdfc4ebb83de703856fa01e35f5f",
+                "reference": "47b639dc02bcfdfc4ebb83de703856fa01e35f5f",
                 "shasum": ""
             },
             "require": {
@@ -6796,7 +6794,7 @@
             ],
             "support": {
                 "issues": "https://github.com/facade/flare-client-php/issues",
-                "source": "https://github.com/facade/flare-client-php/tree/1.8.0"
+                "source": "https://github.com/facade/flare-client-php/tree/1.8.1"
             },
             "funding": [
                 {
@@ -6804,7 +6802,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-30T11:11:50+00:00"
+            "time": "2021-05-31T19:23:29+00:00"
         },
         {
             "name": "facade/ignition",
@@ -9063,7 +9061,7 @@
             "description": "Provides tools to ease debugging PHP code",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/debug/tree/4.4"
+                "source": "https://github.com/symfony/debug/tree/v4.4.25"
             },
             "funding": [
                 {
