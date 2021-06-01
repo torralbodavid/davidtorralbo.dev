@@ -1,4 +1,5 @@
 const mix = require("laravel-mix");
+require('mix-env-file');
 
 require("laravel-mix-tailwind");
 require('laravel-mix-critical');
@@ -23,7 +24,7 @@ mix.js('resources/js/app.js', 'public/js')
     .critical({
         enabled: mix.inProduction(),
         urls: [
-            { src: 'https://davidtorralbo.dev.test/', dest: 'public/css/index_critical.min.css' },
+            { src: process.env.APP_URL, dest: 'public/css/critical.min.css' },
         ],
         options: {
             minify: true,
