@@ -21,7 +21,8 @@
         "php-http/guzzle7-adapter": "0.2.x-dev",
         "spatie/laravel-honeypot": "^4.0",
         "spiral/roadrunner": "^2.0",
-        "themsaid/wink": "^1.2"
+        "themsaid/wink": "^1.2",
+        "watson/rememberable": "dev-master"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.3",
