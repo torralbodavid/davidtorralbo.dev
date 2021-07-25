@@ -18,7 +18,7 @@
         "laravel/octane": "1.0",
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^2.4.2",
-        "php-http/guzzle7-adapter": "0.2.x-dev",
+        "php-http/guzzle7-adapter": "dev-master",
         "spatie/laravel-honeypot": "^4.0",
         "spiral/roadrunner": "^2.0",
         "themsaid/wink": "^1.2",
