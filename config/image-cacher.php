@@ -63,5 +63,5 @@ return [
    |
    */
 
-    'output_format' => null,
+    'output_format' => 'webp',
 ];
