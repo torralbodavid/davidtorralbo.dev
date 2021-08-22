@@ -1,5 +1,5 @@
 @section('title', $tag === null ? 'The programmer\'s blog' : "{$page_tag->name} | The programmer's blog")
-@section('description', "{$page_tag->name} | I'm going to take advantage of this space on the internet to share all the knowledge I can about tech, as well as gain as much experience as I can.")
+@section('description', $page_tag !== null ? $page_tag->name. '|' : '' . "I'm going to take advantage of this space on the internet to share all the knowledge I can about tech, as well as gain as much experience as I can.")
 
 <div class="relative px-4 sm:px-6 lg:px-8 mt-12">
     <div class="inset-0">
