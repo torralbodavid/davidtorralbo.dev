@@ -1718,12 +1718,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "f267d7cb9b159805d3e6ca805210d85f40c27209"
+                "reference": "3d1ead403e05ee0b9aa93a6ff720704970aec9c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/f267d7cb9b159805d3e6ca805210d85f40c27209",
-                "reference": "f267d7cb9b159805d3e6ca805210d85f40c27209",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/3d1ead403e05ee0b9aa93a6ff720704970aec9c8",
+                "reference": "3d1ead403e05ee0b9aa93a6ff720704970aec9c8",
                 "shasum": ""
             },
             "require": {
@@ -1882,7 +1882,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-09-21T13:41:09+00:00"
+            "time": "2021-09-21T18:36:59+00:00"
         },
         {
             "name": "laravel/octane",

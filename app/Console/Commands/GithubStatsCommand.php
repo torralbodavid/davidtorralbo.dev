@@ -2,13 +2,13 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Stats;
 use Exception;
 use Github\Api\CurrentUser;
 use Github\Api\GraphQL;
 use GrahamCampbell\GitHub\Facades\GitHub;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Redis;
 
 class GithubStatsCommand extends Command
 {
@@ -54,12 +54,11 @@ class GithubStatsCommand extends Command
         $this->info('Trying to update the database...');
 
         try {
-            Stats::updateOrCreate(['username' => $this->stats->get('user')],
-                [
-                    'repositories' => $this->stats->get('repositories'),
-                    'stargazers' => $this->stats->get('stargazers'),
-                    'contributions' => $this->stats->get('contributions'),
-                ]);
+            Redis::set('github:stats', json_encode([
+                'repositories' => $this->stats->get('repositories'),
+                'stargazers' => $this->stats->get('stargazers'),
+                'contributions' => $this->stats->get('contributions'),
+            ]));
 
             $this->info('Success!');
 
