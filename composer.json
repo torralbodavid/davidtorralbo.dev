@@ -1,10 +1,10 @@
 {
-    "name": "laravel/laravel",
+    "name": "torralbodavid/davidtorralbo.dev",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Source code of davidtorralbo.dev.",
     "keywords": [
-        "framework",
-        "laravel"
+        "david torralbo",
+        "blog"
     ],
     "license": "MIT",
     "require": {
