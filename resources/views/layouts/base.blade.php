@@ -41,7 +41,7 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="canonical" href="{{ Request::url() }}" />
+        <link rel="canonical" href="{{ request()->url() }}" />
 
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.x/dist/alpine.min.js" defer></script>
     </head>
