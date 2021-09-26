@@ -49,7 +49,7 @@
     <body class="bg-body text-body font-body">
         @yield('body')
 
-        @if(request()->route()->getName() !== 'home')
+        @if(request()->route()?->getName() !== 'home')
             @livewireScripts
         @endif
         <script type="text/javascript">
