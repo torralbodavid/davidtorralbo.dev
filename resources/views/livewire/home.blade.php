@@ -1,5 +1,5 @@
-@section('title', 'Developer in Banyoles, Girona')
-@section('description', 'Back-End Developer in Banyoles, Girona')
+@section('title', 'David Torralbo: Developer in Banyoles, Girona')
+@section('description', 'My name is David Torralbo, I\'m a 23 years old Backend Developer from Banyoles, Girona. I work at GNA Hotel Solutions since 2017.')
 
 <main class="bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 lg:relative">
     <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
