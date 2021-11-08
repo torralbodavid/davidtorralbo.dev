@@ -1,0 +1,25 @@
+{
+    "ci": {
+        "collect": {
+            "staticDistDir": "."
+        },
+        "assert": {
+            "assertions": {
+                "categories:performance": ["error", { "minScore": 0.7 }],
+                "first-contentful-paint": ["error", { "maxNumericValue": 1000 }],
+                "largest-contentful-paint": ["error", { "maxNumericValue": 2000 }],
+                "cumulative-layout-shift": ["error", { "maxNumericValue": 0.1 }],
+                "interactive": ["error", { "maxNumericValue": 1500 }],
+                "resource-summary:font:count": ["error", { "maxNumericValue": 1 }],
+                "resource-summary:script:size": [
+                    "error",
+                    { "maxNumericValue": 150000 }
+                ],
+                "resource-summary:stylesheet:size": [
+                    "error",
+                    { "maxNumericValue": 100000 }
+                ]
+            }
+        }
+    }
+}
