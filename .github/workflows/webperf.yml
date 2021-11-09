@@ -11,6 +11,6 @@ jobs:
           urls: |
             https://www.servigroup.com/es/
             https://www.hotelportsalins.com/
-          configPath: ./setup/lighthouse-audit.json
+          configPath: setup/lighthouse-audit.json
           uploadArtifacts: true
           temporaryPublicStorage: true
