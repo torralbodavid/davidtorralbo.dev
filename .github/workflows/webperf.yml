@@ -8,6 +8,7 @@ jobs:
       - name: 🚦 Audit URLs using Lighthouse 8
         uses: treosh/lighthouse-ci-action@v8
         with:
+          runs: 3
           urls: |
             https://davidtorralbo.dev/
           configPath: ./.github/workflows/setup/lighthouse-audit.json
