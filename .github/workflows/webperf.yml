@@ -1,30 +1,12 @@
-name: Web Performance Audit
-on: pull_request
-jobs:
-  build:
-    runs-on: ubuntu-latest
+name: Lighthouse
+on: [pull_request]
 
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@master
+      - name: Lighthouse
+        uses: foo-software/lighthouse-check-action@master
         with:
-          node-version: 12.x
-      - name: Install & Build
-        run: |
-          npm install
-          npm run prod
-      - name: Wait for the Netlify Preview
-        uses: jakepartusch/wait-for-netlify-action@v1
-        id: netlify
-        with:
-          site_name: "davidtorralbodev"
-      - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v7
-        with:
-          runs: 3
-          urls: |
-            https://davidtorralbo.dev/
-          configPath: "./.github/workflows/setup/lighthouse-audit.json"
-          uploadArtifacts: true
-          temporaryPublicStorage: true
+          urls: 'https://davidtorralbo.dev,https://www.servigroup.com/es/'
