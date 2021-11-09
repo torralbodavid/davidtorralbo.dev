@@ -1,16 +1,15 @@
-name: Lighthouse CI
+name: 👮🏻 Lighthouse Check
 on: push
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Audit URLs using Lighthouse
+      - name: 🚦 Audit URLs using Lighthouse 8
         uses: treosh/lighthouse-ci-action@v8
         with:
           urls: |
             https://www.servigroup.com/es/
-            https://www.hotelportsalins.com/
           configPath: ./.github/workflows/setup/lighthouse-audit.json
           uploadArtifacts: true
           temporaryPublicStorage: true
