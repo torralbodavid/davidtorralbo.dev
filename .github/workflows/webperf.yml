@@ -1,12 +1,16 @@
-name: Lighthouse
-on: [pull_request]
-
+name: Lighthouse CI
+on: push
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Lighthouse
-        uses: foo-software/lighthouse-check-action@master
+      - uses: actions/checkout@v2
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v8
         with:
-          urls: 'https://davidtorralbo.dev,https://www.servigroup.com/es/'
+          urls: |
+            https://www.servigroup.com/es/
+            https://www.hotelportsalins.com/
+          configPath: ./lighthouse-audit.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
