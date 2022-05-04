@@ -33,7 +33,6 @@
 
     @yield('cards')
 
-    <link rel="stylesheet" href="{{ mix('css/inter.css') }}" media="print" onload="this.media='all'">
     <style type="text/css">
         {!! file_get_contents(asset('css/critical.min.css')) !!}
     </style>
@@ -75,5 +74,6 @@
 <noscript>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </noscript>
+<link rel="stylesheet" href="{{ mix('css/inter.css') }}" media="print" onload="this.media='all'">
 </body>
 </html>
