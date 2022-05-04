@@ -5,8 +5,8 @@
                 "categories:performance": ["error", { "minScore": 0.7 }],
                 "first-contentful-paint": ["error", { "maxNumericValue": 1070 }],
                 "largest-contentful-paint": ["error", { "maxNumericValue": 1800 }],
-                "cumulative-layout-shift": ["error", { "maxNumericValue": 0.2 }],
-                "interactive": ["error", { "maxNumericValue": 2670 }],
+                "cumulative-layout-shift": ["error", { "maxNumericValue": 0.3 }],
+                "interactive": ["error", { "maxNumericValue": 4000 }],
                 "resource-summary:font:count": ["error", { "maxNumericValue": 1 }],
                 "resource-summary:script:size": [
                     "error",
