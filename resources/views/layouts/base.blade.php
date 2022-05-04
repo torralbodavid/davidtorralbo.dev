@@ -74,6 +74,6 @@
 <noscript>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </noscript>
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ asset('static/inter.css') }}" media="print" onload="this.media='all'">
 </body>
 </html>
