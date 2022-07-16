@@ -13,7 +13,7 @@ class Page extends Component
     {
         $page = WinkPage::where('slug', $slug)->first();
 
-        if($page === null) {
+        if ($page === null) {
             abort(404);
         }
 

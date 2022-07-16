@@ -9,8 +9,11 @@ use Livewire\Component;
 class Contact extends Component
 {
     public $name;
+
     public $surname;
+
     public $email;
+
     public $text;
 
     public function submit()
@@ -30,7 +33,7 @@ class Contact extends Component
         $this->text = '';
 
         session()->flash('title', 'Mail sent correctly!');
-        session()->flash('description', "I will reply you as soon as possible 😊.");
+        session()->flash('description', 'I will reply you as soon as possible 😊.');
     }
 
     public function render()

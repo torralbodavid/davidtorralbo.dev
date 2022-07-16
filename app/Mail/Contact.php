@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
@@ -12,10 +11,12 @@ class Contact extends Mailable
     use Queueable, SerializesModels;
 
     private $name;
-    private $surname;
-    private $email;
-    private $text;
 
+    private $surname;
+
+    private $email;
+
+    private $text;
 
     /**
      * Create a new message instance.
@@ -41,7 +42,7 @@ class Contact extends Mailable
             'name' => $this->name,
             'surname' => $this->surname,
             'email' => $this->email,
-            'text' => $this->text
+            'text' => $this->text,
         ]);
     }
 }

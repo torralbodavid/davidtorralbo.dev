@@ -7,6 +7,7 @@ use Illuminate\View\Component;
 class AppNotification extends Component
 {
     public ?string $title;
+
     public ?string $description;
 
     /**

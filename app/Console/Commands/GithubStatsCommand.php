@@ -17,7 +17,9 @@ class GithubStatsCommand extends Command
     protected $description = 'Update GitHub stats';
 
     private CurrentUser $currentUser;
+
     private GraphQL $graphQL;
+
     private Collection $stats;
 
     public function __construct()
@@ -37,7 +39,7 @@ class GithubStatsCommand extends Command
             $this->stats = collect([
                 'user' => $this->currentUser->show()['login'],
                 'repositories' => $this->currentUser->show()['public_repos'],
-                'stargazers' => collect($this->currentUser->repositories())->map(fn($repository) => ['stargazers_count' => $repository['stargazers_count']])->sum('stargazers_count'),
+                'stargazers' => collect($this->currentUser->repositories())->map(fn ($repository) => ['stargazers_count' => $repository['stargazers_count']])->sum('stargazers_count'),
                 'contributions' => collect($this->graphQL->execute("query {
             user(login: \"{$this->currentUser->show()['login']}\") {
               contributionsCollection {
@@ -46,7 +48,7 @@ class GithubStatsCommand extends Command
                 }
               }
             }
-          }"))->flatten()->first()]);
+          }"))->flatten()->first(), ]);
         } catch (Exception $e) {
             $this->error('Error while getting info.');
         }
@@ -61,7 +63,6 @@ class GithubStatsCommand extends Command
             ]));
 
             $this->info('Success!');
-
         } catch (Exception $e) {
             $this->error('Error while updating the database.');
         }

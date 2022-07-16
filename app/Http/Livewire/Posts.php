@@ -9,7 +9,9 @@ use Wink\WinkTag;
 class Posts extends Component
 {
     public $items;
+
     public $pagination;
+
     public $tag;
 
     public function mount($items = 9, $pagination = true, $tag = null)
@@ -26,10 +28,10 @@ class Posts extends Component
             ->orderByDesc('created_at')
             ->paginate($this->items);
 
-        if($this->tag !== null) {
+        if ($this->tag !== null) {
             $posts = WinkTag::with('posts.tags')->where('slug', $this->tag)->first();
 
-            if($posts === null) {
+            if ($posts === null) {
                 abort(404);
             }
 
@@ -42,10 +44,9 @@ class Posts extends Component
             'posts' => $posts,
             'items' => $this->items,
             'pagination' => $this->pagination,
-            'page_tag' => WinkTag::where('slug', $this->tag)->first()
+            'page_tag' => WinkTag::where('slug', $this->tag)->first(),
         ])
             ->extends('layouts.app')
             ->section('content');
     }
-
 }

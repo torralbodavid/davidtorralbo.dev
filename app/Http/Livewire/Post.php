@@ -14,7 +14,7 @@ class Post extends Component
         $post = WinkPost::where('slug', $slug)->where('published', true)
             ->where('publish_date', '<=', now())->first();
 
-        if($post === null) {
+        if ($post === null) {
             abort(404);
         }
 

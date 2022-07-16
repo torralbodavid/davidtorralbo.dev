@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Livewire\Contact;
+use App\Http\Livewire\Home;
 use App\Http\Livewire\Page;
 use App\Http\Livewire\Post;
 use App\Http\Livewire\Posts;
-use App\Http\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 
 /*
