@@ -1,136 +1,1488 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<x-layouts.app>
+    <div class="" style="">
 
-        <title>Laravel</title>
+        <div x-data="{ open: false }" @keydown.window.escape="open = false" class="bg-white">
+            <!-- Mobile menu -->
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+            <div x-show="open" class="relative z-40 lg:hidden" x-description="Off-canvas menu for mobile, show/hide based on off-canvas menu state." x-ref="dialog" aria-modal="true" style="display: none;">
 
-        <!-- Styles -->
-        <livewire:styles />
-        <livewire:scripts />
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+                <div x-show="open" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-description="Off-canvas menu backdrop, show/hide based on off-canvas menu state." class="fixed inset-0 bg-black bg-opacity-25" style="display: none;"></div>
 
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                <div class="fixed inset-0 flex z-40">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+                    <div x-show="open" x-transition:enter="transition ease-in-out duration-300 transform" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in-out duration-300 transform" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full" x-description="Off-canvas menu, show/hide based on off-canvas menu state." class="relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto" @click.away="open = false" style="display: none;">
+                        <div class="px-4 pt-5 pb-2 flex">
+                            <button type="button" class="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400" @click="open = false">
+                                <span class="sr-only">Close menu</span>
+                                <svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
+                        <!-- Links -->
+                        <div class="mt-2" x-data="Components.tabs()" @tab-click.window="onTabClick" @tab-keydown.window="onTabKeydown">
+                            <div class="border-b border-gray-200">
+                                <div class="-mb-px flex px-4 space-x-8" aria-orientation="horizontal" role="tablist">
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
+                                    <button id="tabs-1-tab-1" class="flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium text-indigo-600 border-indigo-600" x-state:on="Selected" x-state:off="Not Selected" :class="{ 'text-indigo-600 border-indigo-600': selected, 'text-gray-900 border-transparent': !(selected) }" x-data="Components.tab(0)" aria-controls="tabs-1-panel-1" role="tab" x-init="init()" @click="onClick" @keydown="onKeydown" @tab-select.window="onTabSelect" :tabindex="selected ? 0 : -1" :aria-selected="selected ? 'true' : 'false'" type="button" tabindex="0" aria-selected="true">
+                                        Women
+                                    </button>
+
+                                    <button id="tabs-1-tab-2" class="text-gray-900 border-transparent flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium" x-state:on="Selected" x-state:off="Not Selected" :class="{ 'text-indigo-600 border-indigo-600': selected, 'text-gray-900 border-transparent': !(selected) }" x-data="Components.tab(0)" aria-controls="tabs-1-panel-2" role="tab" x-init="init()" @click="onClick" @keydown="onKeydown" @tab-select.window="onTabSelect" :tabindex="selected ? 0 : -1" :aria-selected="selected ? 'true' : 'false'" type="button" tabindex="-1" aria-selected="false">
+                                        Men
+                                    </button>
+
+                                </div>
                             </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
+
+                            <div id="tabs-1-panel-1" class="px-4 pt-10 pb-6 space-y-12" x-description="'Women' tab panel, show/hide based on tab state." x-data="Components.tabPanel(0)" aria-labelledby="tabs-1-tab-1" x-init="init()" x-show="selected" @tab-select.window="onTabSelect" role="tabpanel" tabindex="0">
+                                <div class="grid grid-cols-1 items-start gap-y-10 gap-x-6">
+                                    <div class="grid grid-cols-1 gap-y-10 gap-x-6">
+                                        <div>
+                                            <p id="mobile-featured-heading-0" class="font-medium text-gray-900">
+                                                Featured
+                                            </p>
+                                            <ul role="list" aria-labelledby="mobile-featured-heading-0" class="mt-6 space-y-6">
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Sleep
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Swimwear
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Underwear
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p id="mobile-categories-heading" class="font-medium text-gray-900">
+                                                Categories
+                                            </p>
+                                            <ul role="list" aria-labelledby="mobile-categories-heading" class="mt-6 space-y-6">
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Basic Tees
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Artwork Tees
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Bottoms
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Underwear
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Accessories
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-y-10 gap-x-6">
+                                        <div>
+                                            <p id="mobile-collection-heading" class="font-medium text-gray-900">
+                                                Collection
+                                            </p>
+                                            <ul role="list" aria-labelledby="mobile-collection-heading" class="mt-6 space-y-6">
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Everything
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Core
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        New Arrivals
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Sale
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+                                        <div>
+                                            <p id="mobile-brand-heading" class="font-medium text-gray-900">
+                                                Brands
+                                            </p>
+                                            <ul role="list" aria-labelledby="mobile-brand-heading" class="mt-6 space-y-6">
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Full Nelson
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        My Way
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Re-Arranged
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Counterfeit
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Significant Other
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+
+                            <div id="tabs-1-panel-2" class="px-4 pt-10 pb-6 space-y-12" x-description="'Men' tab panel, show/hide based on tab state." x-data="Components.tabPanel(0)" aria-labelledby="tabs-1-tab-2" x-init="init()" x-show="selected" @tab-select.window="onTabSelect" role="tabpanel" tabindex="0" style="display: none;">
+                                <div class="grid grid-cols-1 items-start gap-y-10 gap-x-6">
+                                    <div class="grid grid-cols-1 gap-y-10 gap-x-6">
+                                        <div>
+                                            <p id="mobile-featured-heading-1" class="font-medium text-gray-900">
+                                                Featured
+                                            </p>
+                                            <ul role="list" aria-labelledby="mobile-featured-heading-1" class="mt-6 space-y-6">
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Casual
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Boxers
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Outdoor
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p id="mobile-categories-heading" class="font-medium text-gray-900">
+                                                Categories
+                                            </p>
+                                            <ul role="list" aria-labelledby="mobile-categories-heading" class="mt-6 space-y-6">
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Artwork Tees
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Pants
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Accessories
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Boxers
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Basic Tees
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-y-10 gap-x-6">
+                                        <div>
+                                            <p id="mobile-collection-heading" class="font-medium text-gray-900">
+                                                Collection
+                                            </p>
+                                            <ul role="list" aria-labelledby="mobile-collection-heading" class="mt-6 space-y-6">
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Everything
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Core
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        New Arrivals
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Sale
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+                                        <div>
+                                            <p id="mobile-brand-heading" class="font-medium text-gray-900">
+                                                Brands
+                                            </p>
+                                            <ul role="list" aria-labelledby="mobile-brand-heading" class="mt-6 space-y-6">
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Significant Other
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        My Way
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Counterfeit
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Re-Arranged
+                                                    </a>
+                                                </li>
+
+                                                <li class="flex">
+                                                    <a href="#" class="text-gray-500">
+                                                        Full Nelson
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="border-t border-gray-200 py-6 px-4 space-y-6">
+
+                            <div class="flow-root">
+                                <a href="#" class="-m-2 p-2 block font-medium text-gray-900">Company</a>
+                            </div>
+
+                            <div class="flow-root">
+                                <a href="#" class="-m-2 p-2 block font-medium text-gray-900">Stores</a>
+                            </div>
+
+                        </div>
+
+                        <div class="border-t border-gray-200 py-6 px-4 space-y-6">
+                            <div class="flow-root">
+                                <a href="#" class="-m-2 p-2 block font-medium text-gray-900">Create an account</a>
+                            </div>
+                            <div class="flow-root">
+                                <a href="#" class="-m-2 p-2 block font-medium text-gray-900">Sign in</a>
                             </div>
                         </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
+                        <div class="border-t border-gray-200 py-6 px-4 space-y-6">
+                            <!-- Currency selector -->
+                            <form>
+                                <div class="inline-block">
+                                    <label for="mobile-currency" class="sr-only">Currency</label>
+                                    <div class="-ml-2 group relative border-transparent rounded-md focus-within:ring-2 focus-within:ring-white">
+                                        <select id="mobile-currency" name="currency" class="bg-none border-transparent rounded-md py-0.5 pl-2 pr-5 flex items-center text-sm font-medium text-gray-700 group-hover:text-gray-800 focus:outline-none focus:ring-0 focus:border-transparent">
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                                            <option>CAD</option>
+
+                                            <option>USD</option>
+
+                                            <option>AUD</option>
+
+                                            <option>EUR</option>
+
+                                            <option>GBP</option>
+
+                                        </select>
+                                        <div class="absolute right-0 inset-y-0 flex items-center pointer-events-none">
+                                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="w-5 h-5 text-gray-500">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8l4 4 4-4"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
-                </div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
                 </div>
             </div>
+
+
+            <header class="relative z-10">
+                <nav aria-label="Top">
+                    <!-- Top navigation -->
+                    <div class="bg-gray-900">
+                        <div class="max-w-7xl mx-auto h-10 px-4 flex items-center justify-between sm:px-6 lg:px-8">
+                            <!-- Currency selector -->
+                            <form class="hidden lg:block lg:flex-1">
+                                <div class="flex">
+                                    <label for="desktop-currency" class="sr-only">Currency</label>
+                                    <div class="-ml-2 group relative bg-gray-900 border-transparent rounded-md focus-within:ring-2 focus-within:ring-white">
+                                        <select id="desktop-currency" name="currency" class="bg-none bg-gray-900 border-transparent rounded-md py-0.5 pl-2 pr-5 flex items-center text-sm font-medium text-white group-hover:text-gray-100 focus:outline-none focus:ring-0 focus:border-transparent">
+
+                                            <option>CAD</option>
+
+                                            <option>USD</option>
+
+                                            <option>AUD</option>
+
+                                            <option>EUR</option>
+
+                                            <option>GBP</option>
+
+                                        </select>
+                                        <div class="absolute right-0 inset-y-0 flex items-center pointer-events-none">
+                                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="w-5 h-5 text-gray-300">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8l4 4 4-4"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <p class="flex-1 text-center text-sm font-medium text-white lg:flex-none">
+                                Get free delivery on orders over $100
+                            </p>
+
+                            <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                                <a href="#" class="text-sm font-medium text-white hover:text-gray-100">Create an account</a>
+                                <span class="h-6 w-px bg-gray-600" aria-hidden="true"></span>
+                                <a href="#" class="text-sm font-medium text-white hover:text-gray-100">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary navigation -->
+                    <div class="bg-white">
+                        <div class="border-b border-gray-200">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div class="h-16 flex items-center justify-between">
+                                    <!-- Logo (lg+) -->
+                                    <div class="hidden lg:flex lg:items-center">
+                                        <a href="#">
+                                            <span class="sr-only">Workflow</span>
+                                            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&amp;shade=600" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="hidden h-full lg:flex">
+                                        <!-- Mega menus -->
+                                        <div class="ml-8" x-data="Components.popoverGroup()" x-init="init()">
+                                            <div class="h-full flex justify-center space-x-8">
+
+                                                <div class="flex" x-data="Components.popover({ open: false, focus: false })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+                                                    <div class="relative flex">
+                                                        <button type="button" x-state:on="Item active" x-state:off="Item inactive" class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px" :class="{ 'border-indigo-600 text-indigo-600': open, 'border-transparent text-gray-700 hover:text-gray-800': !(open) }" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                                                            Women
+                                                        </button>
+                                                    </div>
+
+
+                                                    <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-description="'Women' mega menu, show/hide based on flyout menu state." class="absolute top-full inset-x-0 text-gray-500 sm:text-sm" x-ref="panel" @click.away="open = false" style="display: none;">
+                                                        <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                                                        <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true"></div>
+
+                                                        <div class="relative bg-white">
+                                                            <div class="max-w-7xl mx-auto px-8">
+                                                                <div class="grid grid-cols-2 items-start gap-y-10 gap-x-8 pt-10 pb-12">
+                                                                    <div class="grid grid-cols-2 gap-y-10 gap-x-8">
+                                                                        <div>
+                                                                            <p id="desktop-featured-heading-0" class="font-medium text-gray-900">
+                                                                                Featured
+                                                                            </p>
+                                                                            <ul role="list" aria-labelledby="desktop-featured-heading-0" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Sleep
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Swimwear
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Underwear
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div>
+                                                                            <p id="desktop-categories-heading" class="font-medium text-gray-900">
+                                                                                Categories
+                                                                            </p>
+                                                                            <ul role="list" aria-labelledby="desktop-categories-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Basic Tees
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Artwork Tees
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Bottoms
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Underwear
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Accessories
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-2 gap-y-10 gap-x-8">
+                                                                        <div>
+                                                                            <p id="desktop-collection-heading" class="font-medium text-gray-900">
+                                                                                Collection
+                                                                            </p>
+                                                                            <ul role="list" aria-labelledby="desktop-collection-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Everything
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Core
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        New Arrivals
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Sale
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div>
+                                                                            <p id="desktop-brand-heading" class="font-medium text-gray-900">
+                                                                                Brands
+                                                                            </p>
+                                                                            <ul role="list" aria-labelledby="desktop-brand-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Full Nelson
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        My Way
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Re-Arranged
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Counterfeit
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Significant Other
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="flex" x-data="Components.popover({ open: false, focus: false })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+                                                    <div class="relative flex">
+                                                        <button type="button" x-state:on="Item active" x-state:off="Item inactive" class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px" :class="{ 'border-indigo-600 text-indigo-600': open, 'border-transparent text-gray-700 hover:text-gray-800': !(open) }" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                                                            Men
+                                                        </button>
+                                                    </div>
+
+
+                                                    <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-description="'Men' mega menu, show/hide based on flyout menu state." class="absolute top-full inset-x-0 text-gray-500 sm:text-sm" x-ref="panel" @click.away="open = false" style="display: none;">
+                                                        <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                                                        <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true"></div>
+
+                                                        <div class="relative bg-white">
+                                                            <div class="max-w-7xl mx-auto px-8">
+                                                                <div class="grid grid-cols-2 items-start gap-y-10 gap-x-8 pt-10 pb-12">
+                                                                    <div class="grid grid-cols-2 gap-y-10 gap-x-8">
+                                                                        <div>
+                                                                            <p id="desktop-featured-heading-1" class="font-medium text-gray-900">
+                                                                                Featured
+                                                                            </p>
+                                                                            <ul role="list" aria-labelledby="desktop-featured-heading-1" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Casual
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Boxers
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Outdoor
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div>
+                                                                            <p id="desktop-categories-heading" class="font-medium text-gray-900">
+                                                                                Categories
+                                                                            </p>
+                                                                            <ul role="list" aria-labelledby="desktop-categories-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Artwork Tees
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Pants
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Accessories
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Boxers
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Basic Tees
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-2 gap-y-10 gap-x-8">
+                                                                        <div>
+                                                                            <p id="desktop-collection-heading" class="font-medium text-gray-900">
+                                                                                Collection
+                                                                            </p>
+                                                                            <ul role="list" aria-labelledby="desktop-collection-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Everything
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Core
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        New Arrivals
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Sale
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+
+                                                                        <div>
+                                                                            <p id="desktop-brand-heading" class="font-medium text-gray-900">
+                                                                                Brands
+                                                                            </p>
+                                                                            <ul role="list" aria-labelledby="desktop-brand-heading" class="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Significant Other
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        My Way
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Counterfeit
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Re-Arranged
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <li class="flex">
+                                                                                    <a href="#" class="hover:text-gray-800">
+                                                                                        Full Nelson
+                                                                                    </a>
+                                                                                </li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+
+
+                                                <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Company</a>
+
+                                                <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Stores</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mobile menu and search (lg-) -->
+                                    <div class="flex-1 flex items-center lg:hidden">
+                                        <button type="button" x-description="Mobile menu toggle, controls the 'mobileMenuOpen' state." class="-ml-2 bg-white p-2 rounded-md text-gray-400" @click="open = true">
+                                            <span class="sr-only">Open menu</span>
+                                            <svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Search -->
+                                        <a href="#" class="ml-2 p-2 text-gray-400 hover:text-gray-500">
+                                            <span class="sr-only">Search</span>
+                                            <svg class="w-6 h-6" x-description="Heroicon name: outline/search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+
+                                    <!-- Logo (lg-) -->
+                                    <a href="#" class="lg:hidden">
+                                        <span class="sr-only">Workflow</span>
+                                        <img src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&amp;shade=600" alt="" class="h-8 w-auto">
+                                    </a>
+
+                                    <div class="flex-1 flex items-center justify-end">
+                                        <div class="flex items-center lg:ml-8">
+                                            <div class="flex space-x-8">
+                                                <div class="hidden lg:flex">
+                                                    <a href="#" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
+                                                        <span class="sr-only">Search</span>
+                                                        <svg class="w-6 h-6" x-description="Heroicon name: outline/search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+
+                                                <div class="flex">
+                                                    <a href="#" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
+                                                        <span class="sr-only">Account</span>
+                                                        <svg class="w-6 h-6" x-description="Heroicon name: outline/user" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <span class="mx-4 h-6 w-px bg-gray-200 lg:mx-6" aria-hidden="true"></span>
+
+                                            <div class="flow-root">
+                                                <a href="#" class="group -m-2 p-2 flex items-center">
+                                                    <svg class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/shopping-cart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                                    </svg>
+                                                    <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                                                    <span class="sr-only">items in cart, view bag</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+                <!-- Hero -->
+                <div class="flex flex-col border-b border-gray-200 lg:border-0">
+                    <nav aria-label="Offers" class="order-last lg:order-first">
+                        <div class="max-w-7xl mx-auto lg:px-8">
+                            <ul role="list" class="grid grid-cols-1 divide-y divide-gray-200 lg:grid-cols-3 lg:divide-y-0 lg:divide-x">
+
+                                <li class="flex flex-col">
+                                    <a href="#" class="relative flex-1 flex flex-col justify-center bg-white py-6 px-4 text-center focus:z-10">
+                                        <p class="text-sm text-gray-500">
+                                            Download the app
+                                        </p>
+                                        <p class="font-semibold text-gray-900">
+                                            Get an exclusive $5 off code
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="flex flex-col">
+                                    <a href="#" class="relative flex-1 flex flex-col justify-center bg-white py-6 px-4 text-center focus:z-10">
+                                        <p class="text-sm text-gray-500">
+                                            Return when you're ready
+                                        </p>
+                                        <p class="font-semibold text-gray-900">
+                                            60 days of free returns
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="flex flex-col">
+                                    <a href="#" class="relative flex-1 flex flex-col justify-center bg-white py-6 px-4 text-center focus:z-10">
+                                        <p class="text-sm text-gray-500">
+                                            Sign up for our newsletter
+                                        </p>
+                                        <p class="font-semibold text-gray-900">
+                                            15% off your first order
+                                        </p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div class="relative">
+                        <div aria-hidden="true" class="hidden absolute w-1/2 h-full bg-gray-100 lg:block"></div>
+                        <div class="relative bg-gray-100 lg:bg-transparent">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-2">
+                                <div class="max-w-2xl mx-auto py-24 lg:py-64 lg:max-w-none">
+                                    <div class="lg:pr-16">
+                                        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">Focus on what matters</h1>
+                                        <p class="mt-4 text-xl text-gray-600">All the charts, datepickers, and notifications in the world can't beat checking off some items on a paper card.</p>
+                                        <div class="mt-6">
+                                            <a href="#" class="inline-block bg-indigo-600 border border-transparent py-3 px-8 rounded-md font-medium text-white hover:bg-indigo-700">Shop Productivity</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-48 sm:h-64 lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full">
+                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-hero-half-width.jpg" alt="" class="w-full h-full object-center object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending products -->
+                <section aria-labelledby="trending-heading" class="bg-white">
+                    <div class="py-16 sm:py-24 lg:max-w-7xl lg:mx-auto lg:py-32 lg:px-8">
+                        <div class="px-4 flex items-center justify-between sm:px-6 lg:px-0">
+                            <h2 id="trending-heading" class="text-2xl font-extrabold tracking-tight text-gray-900">Trending products</h2>
+                            <a href="#" class="hidden sm:block text-sm font-semibold text-indigo-600 hover:text-indigo-500">See everything<span aria-hidden="true"> →</span></a>
+                        </div>
+
+                        <div class="mt-8 relative">
+                            <div class="relative w-full overflow-x-auto">
+                                <ul role="list" class="mx-4 inline-flex space-x-8 sm:mx-6 lg:mx-0 lg:space-x-0 lg:grid lg:grid-cols-4 lg:gap-x-8">
+
+                                    <li class="w-64 inline-flex flex-col text-center lg:w-auto">
+                                        <div class="group relative">
+                                            <div class="w-full bg-gray-200 rounded-md overflow-hidden aspect-w-1 aspect-h-1">
+                                                <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-product-01.jpg" alt="Black machined steel pen with hexagonal grip and small white logo at top." class="w-full h-full object-center object-cover group-hover:opacity-75">
+                                            </div>
+                                            <div class="mt-6">
+                                                <p class="text-sm text-gray-500">
+                                                    Black
+                                                </p>
+                                                <h3 class="mt-1 font-semibold text-gray-900">
+                                                    <a href="#">
+                                                        <span class="absolute inset-0"></span>
+                                                        Machined Pen
+                                                    </a>
+                                                </h3>
+                                                <p class="mt-1 text-gray-900">
+                                                    $35
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <h4 class="sr-only">Available colors</h4>
+                                        <ul role="list" class="mt-auto pt-6 flex items-center justify-center space-x-3">
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#111827">
+                          <span class="sr-only">
+                            Black
+                          </span>
+                                            </li>
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#FDE68A">
+                          <span class="sr-only">
+                            Brass
+                          </span>
+                                            </li>
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#E5E7EB">
+                          <span class="sr-only">
+                            Chrome
+                          </span>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li class="w-64 inline-flex flex-col text-center lg:w-auto">
+                                        <div class="group relative">
+                                            <div class="w-full bg-gray-200 rounded-md overflow-hidden aspect-w-1 aspect-h-1">
+                                                <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-product-02.jpg" alt="Black porcelain mug with modern square handle and natural clay accents on rim and bottom." class="w-full h-full object-center object-cover group-hover:opacity-75">
+                                            </div>
+                                            <div class="mt-6">
+                                                <p class="text-sm text-gray-500">
+                                                    Matte Black
+                                                </p>
+                                                <h3 class="mt-1 font-semibold text-gray-900">
+                                                    <a href="#">
+                                                        <span class="absolute inset-0"></span>
+                                                        Earthen Mug
+                                                    </a>
+                                                </h3>
+                                                <p class="mt-1 text-gray-900">
+                                                    $28
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <h4 class="sr-only">Available colors</h4>
+                                        <ul role="list" class="mt-auto pt-6 flex items-center justify-center space-x-3">
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#4B5563">
+                          <span class="sr-only">
+                            Matte Black
+                          </span>
+                                            </li>
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#FEF3C7">
+                          <span class="sr-only">
+                            Natural
+                          </span>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li class="w-64 inline-flex flex-col text-center lg:w-auto">
+                                        <div class="group relative">
+                                            <div class="w-full bg-gray-200 rounded-md overflow-hidden aspect-w-1 aspect-h-1">
+                                                <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-product-03.jpg" alt="Natural leather journal with brass disc binding and three paper refill sets." class="w-full h-full object-center object-cover group-hover:opacity-75">
+                                            </div>
+                                            <div class="mt-6">
+                                                <p class="text-sm text-gray-500">
+                                                    Natural
+                                                </p>
+                                                <h3 class="mt-1 font-semibold text-gray-900">
+                                                    <a href="#">
+                                                        <span class="absolute inset-0"></span>
+                                                        Leatherbound Daily Journal Set
+                                                    </a>
+                                                </h3>
+                                                <p class="mt-1 text-gray-900">
+                                                    $50
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <h4 class="sr-only">Available colors</h4>
+                                        <ul role="list" class="mt-auto pt-6 flex items-center justify-center space-x-3">
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#FEF3C7">
+                          <span class="sr-only">
+                            Natural
+                          </span>
+                                            </li>
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#1F2937">
+                          <span class="sr-only">
+                            Black
+                          </span>
+                                            </li>
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#7C2D12">
+                          <span class="sr-only">
+                            Brown
+                          </span>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li class="w-64 inline-flex flex-col text-center lg:w-auto">
+                                        <div class="group relative">
+                                            <div class="w-full bg-gray-200 rounded-md overflow-hidden aspect-w-1 aspect-h-1">
+                                                <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-product-04.jpg" alt="Black leather journal with brass disc binding." class="w-full h-full object-center object-cover group-hover:opacity-75">
+                                            </div>
+                                            <div class="mt-6">
+                                                <p class="text-sm text-gray-500">
+                                                    Black
+                                                </p>
+                                                <h3 class="mt-1 font-semibold text-gray-900">
+                                                    <a href="#">
+                                                        <span class="absolute inset-0"></span>
+                                                        Leatherbound Daily Journal
+                                                    </a>
+                                                </h3>
+                                                <p class="mt-1 text-gray-900">
+                                                    $50
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <h4 class="sr-only">Available colors</h4>
+                                        <ul role="list" class="mt-auto pt-6 flex items-center justify-center space-x-3">
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#111827">
+                          <span class="sr-only">
+                            Black
+                          </span>
+                                            </li>
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#7C2D12">
+                          <span class="sr-only">
+                            Brown
+                          </span>
+                                            </li>
+
+                                            <li class="w-4 h-4 rounded-full border border-black border-opacity-10" style="background-color:#FEF3C7">
+                          <span class="sr-only">
+                            Natural
+                          </span>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-12 px-4 sm:hidden">
+                            <a href="#" class="text-sm font-semibold text-indigo-600 hover:text-indigo-500">See everything<span aria-hidden="true"> →</span></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Collections -->
+                <section aria-labelledby="collections-heading" class="bg-gray-100">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
+                            <h2 id="collections-heading" class="text-2xl font-extrabold text-gray-900">Collections</h2>
+
+                            <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
+
+                                <div class="group relative">
+                                    <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full h-full object-center object-cover">
+                                    </div>
+                                    <h3 class="mt-6 text-sm text-gray-500">
+                                        <a href="#">
+                                            <span class="absolute inset-0"></span>
+                                            Desk and Office
+                                        </a>
+                                    </h3>
+                                    <p class="text-base font-semibold text-gray-900">Work from home accessories</p>
+                                </div>
+
+                                <div class="group relative">
+                                    <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full h-full object-center object-cover">
+                                    </div>
+                                    <h3 class="mt-6 text-sm text-gray-500">
+                                        <a href="#">
+                                            <span class="absolute inset-0"></span>
+                                            Self-Improvement
+                                        </a>
+                                    </h3>
+                                    <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
+                                </div>
+
+                                <div class="group relative">
+                                    <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg" alt="Collection of four insulated travel bottles on wooden shelf." class="w-full h-full object-center object-cover">
+                                    </div>
+                                    <h3 class="mt-6 text-sm text-gray-500">
+                                        <a href="#">
+                                            <span class="absolute inset-0"></span>
+                                            Travel
+                                        </a>
+                                    </h3>
+                                    <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sale and testimonials -->
+                <div class="relative overflow-hidden">
+                    <!-- Decorative background image and gradient -->
+                    <div aria-hidden="true" class="absolute inset-0">
+                        <div class="absolute inset-0 max-w-7xl mx-auto overflow-hidden xl:px-8">
+                            <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-sale-full-width.jpg" alt="" class="w-full h-full object-center object-cover">
+                        </div>
+                        <div class="absolute inset-0 bg-white bg-opacity-75"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-white via-white"></div>
+                    </div>
+
+                    <!-- Sale -->
+                    <section aria-labelledby="sale-heading" class="relative max-w-7xl mx-auto pt-32 px-4 flex flex-col items-center text-center sm:px-6 lg:px-8">
+                        <div class="max-w-2xl mx-auto lg:max-w-none">
+                            <h2 id="sale-heading" class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                                Get 25% off during our one-time sale
+                            </h2>
+                            <p class="mt-4 max-w-xl mx-auto text-xl text-gray-600">Most of our products are limited releases that won't come back. Get your favorite items while they're in stock.</p>
+                            <a href="#" class="mt-6 inline-block w-full bg-gray-900 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-gray-800 sm:w-auto">Get access to our one-time sale</a>
+                        </div>
+                    </section>
+
+                    <!-- Testimonials -->
+                    <section aria-labelledby="testimonial-heading" class="relative py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:py-32 lg:px-8">
+                        <div class="max-w-2xl mx-auto lg:max-w-none">
+                            <h2 id="testimonial-heading" class="text-2xl font-extrabold tracking-tight text-gray-900">What are people saying?</h2>
+
+                            <div class="mt-16 space-y-16 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+
+                                <blockquote class="sm:flex lg:block">
+                                    <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="flex-shrink-0 text-gray-300">
+                                        <path d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z" fill="currentColor"></path>
+                                    </svg>
+                                    <div class="mt-8 sm:mt-0 sm:ml-6 lg:mt-10 lg:ml-0">
+                                        <p class="text-lg text-gray-600">
+                                            My order arrived super quickly. The product is even better than I hoped it would be. Very happy customer over here!
+                                        </p>
+                                        <cite class="mt-4 block font-semibold not-italic text-gray-900">
+                                            Sarah Peters, New Orleans
+                                        </cite>
+                                    </div>
+                                </blockquote>
+
+                                <blockquote class="sm:flex lg:block">
+                                    <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="flex-shrink-0 text-gray-300">
+                                        <path d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z" fill="currentColor"></path>
+                                    </svg>
+                                    <div class="mt-8 sm:mt-0 sm:ml-6 lg:mt-10 lg:ml-0">
+                                        <p class="text-lg text-gray-600">
+                                            I had to return a purchase that didn’t fit. The whole process was so simple that I ended up ordering two new items!
+                                        </p>
+                                        <cite class="mt-4 block font-semibold not-italic text-gray-900">
+                                            Kelly McPherson, Chicago
+                                        </cite>
+                                    </div>
+                                </blockquote>
+
+                                <blockquote class="sm:flex lg:block">
+                                    <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="flex-shrink-0 text-gray-300">
+                                        <path d="M0 18h8.7v-5.555c-.024-3.906 1.113-6.841 2.892-9.68L6.452 0C3.188 2.644-.026 7.86 0 12.469V18zm12.408 0h8.7v-5.555C21.083 8.539 22.22 5.604 24 2.765L18.859 0c-3.263 2.644-6.476 7.86-6.451 12.469V18z" fill="currentColor"></path>
+                                    </svg>
+                                    <div class="mt-8 sm:mt-0 sm:ml-6 lg:mt-10 lg:ml-0">
+                                        <p class="text-lg text-gray-600">
+                                            Now that I’m on holiday for the summer, I’ll probably order a few more shirts. It’s just so convenient, and I know the quality will always be there.
+                                        </p>
+                                        <cite class="mt-4 block font-semibold not-italic text-gray-900">
+                                            Chris Paul, Phoenix
+                                        </cite>
+                                    </div>
+                                </blockquote>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+
+            <footer aria-labelledby="footer-heading" class="bg-white">
+                <h2 id="footer-heading" class="sr-only">Footer</h2>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="border-t border-gray-200">
+                        <div class="pt-16 pb-20">
+                            <div class="md:flex md:justify-center">
+                                <img src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&amp;shade=600" alt="" class="h-8 w-auto">
+                            </div>
+                            <div class="mt-16 max-w-5xl mx-auto xl:grid xl:grid-cols-2 xl:gap-8">
+                                <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+                                    <div class="space-y-12 md:space-y-0 md:grid md:grid-cols-2 md:gap-8">
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">
+                                                Products
+                                            </h3>
+                                            <ul role="list" class="mt-6 space-y-6">
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Bags
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Tees
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Objects
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Home Goods
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Accessories
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">
+                                                Customer Service
+                                            </h3>
+                                            <ul role="list" class="mt-6 space-y-6">
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Contact
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Shipping
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Returns
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Warranty
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Secure Payments
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        FAQ
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Find a store
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-12 md:space-y-0 md:grid md:grid-cols-2 md:gap-8">
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">
+                                                Company
+                                            </h3>
+                                            <ul role="list" class="mt-6 space-y-6">
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Who we are
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Sustainability
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Press
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Careers
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Terms &amp; Conditions
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Privacy
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">
+                                                Legal
+                                            </h3>
+                                            <ul role="list" class="mt-6 space-y-6">
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Terms of Service
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Return Policy
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Privacy Policy
+                                                    </a>
+                                                </li>
+
+                                                <li class="text-sm">
+                                                    <a href="#" class="text-gray-500 hover:text-gray-600">
+                                                        Shipping Policy
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:grid lg:grid-cols-2 lg:gap-x-6 xl:gap-x-8">
+                            <div class="bg-gray-100 rounded-lg p-6 flex items-center sm:p-10">
+                                <div class="max-w-sm mx-auto">
+                                    <h3 class="font-semibold text-gray-900">Sign up for our newsletter</h3>
+                                    <p class="mt-2 text-sm text-gray-500">The latest news, articles, and resources, sent to your inbox weekly.</p>
+                                    <form class="mt-4 sm:mt-6 sm:flex">
+                                        <label for="email-address" class="sr-only">Email address</label>
+                                        <input id="email-address" type="text" autocomplete="email" required="" class="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                                        <div class="mt-3 sm:flex-shrink-0 sm:mt-0 sm:ml-4">
+                                            <button type="submit" class="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-indigo-500">
+                                                Sign up
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 relative py-12 px-6 flex items-center sm:py-16 sm:px-10 lg:mt-0">
+                                <div class="absolute inset-0 rounded-lg overflow-hidden">
+                                    <img src="https://tailwindui.com/img/ecommerce-images/footer-02-exclusive-sale.jpg" alt="" class="w-full h-full filter saturate-0 object-center object-cover">
+                                    <div class="absolute inset-0 bg-indigo-600 bg-opacity-90"></div>
+                                </div>
+                                <div class="relative max-w-sm mx-auto text-center">
+                                    <h3 class="text-2xl font-extrabold tracking-tight text-white">Get early access</h3>
+                                    <p class="mt-2 text-gray-200">
+                                        Did you sign up to the newsletter? If so, use the keyword we sent you to get access. <a href="#" class="font-bold text-white whitespace-nowrap hover:text-gray-200">Go now<span aria-hidden="true"> →</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="py-10 md:flex md:items-center md:justify-between">
+                        <div class="text-center md:text-left">
+                            <p class="text-sm text-gray-500">© 2021 All Rights Reserved</p>
+                        </div>
+
+                        <div class="mt-4 flex items-center justify-center md:mt-0">
+                            <div class="flex space-x-8">
+
+                                <a href="#" class="text-sm text-gray-500 hover:text-gray-600">
+                                    Accessibility
+                                </a>
+
+                                <a href="#" class="text-sm text-gray-500 hover:text-gray-600">
+                                    Privacy
+                                </a>
+
+                                <a href="#" class="text-sm text-gray-500 hover:text-gray-600">
+                                    Terms
+                                </a>
+
+                            </div>
+
+                            <div class="ml-6 border-l border-gray-200 pl-6">
+                                <a href="#" class="flex items-center text-gray-500 hover:text-gray-600">
+                                    <img src="https://tailwindui.com/img/flags/flag-canada.svg" alt="" class="w-5 h-auto flex-shrink-0">
+                                    <span class="ml-3 text-sm">
+                  Change
+                </span>
+                                    <span class="sr-only">location and currency</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </body>
-</html>
+    </div>
+</x-layouts.app>
