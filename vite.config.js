@@ -1,12 +1,20 @@
-import fs from 'fs';
-import laravel from 'laravel-vite-plugin'
-import {defineConfig} from 'vite'
-import {homedir} from 'os'
-import {resolve} from 'path'
-let host = 'davidtorralbo.dev.test'
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+
+const domain = "davidtorralbo.dev.test";
+const homedir = require("os").homedir();
 
 export default defineConfig({
-    server: detectServerConfig(host),
+    server: {
+        https: {
+            key: homedir + "/.config/valet/Certificates/" + domain + ".key",
+            cert: homedir + "/.config/valet/Certificates/" + domain + ".crt",
+        },
+        host: domain,
+        hmr: {
+            host: domain,
+        },
+    },
     plugins: [
         laravel({
             input: [
@@ -17,25 +25,3 @@ export default defineConfig({
         }),
     ],
 });
-
-function detectServerConfig(host) {
-    let keyPath = resolve(homedir(), `.config/valet/Certificates/${host}.key`)
-    let certificatePath = resolve(homedir(), `.config/valet/Certificates/${host}.crt`)
-
-    if (!fs.existsSync(keyPath)) {
-        return {}
-    }
-
-    if (!fs.existsSync(certificatePath)) {
-        return {}
-    }
-
-    return {
-        hmr: {host},
-        host,
-        https: {
-            key: fs.readFileSync(keyPath),
-            cert: fs.readFileSync(certificatePath),
-        },
-    }
-}
