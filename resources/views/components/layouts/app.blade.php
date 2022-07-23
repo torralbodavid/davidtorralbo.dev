@@ -6,12 +6,18 @@
 
     <title>Laravel</title>
 
-    <livewire:styles />
-    <livewire:scripts />
+    <livewire:styles/>
+    <livewire:scripts/>
     <script src="https://tailwindui.com/v2-assets/components.js?id=04b6e66ea653b6e4103cba0bd678003d"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="antialiased">
-    {{ $slot }}
+<div class="" style="">
+    <div x-data="{ open: false }" @keydown.window.escape="open = false" class="bg-white">
+        <x-header/>
+        {{ $slot }}
+        <x-footer/>
+    </div>
+</div>
 </body>
 </html>
