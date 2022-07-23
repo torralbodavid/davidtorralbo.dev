@@ -1089,7 +1089,7 @@
                                         </a>
                                     </div>
                                     <div class="mt-6 sm:max-w-xl">
-                                        <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
+                                        <h1 class="text-6xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
                                             Welcome to my blog 🥳</h1>
                                         <p class="mt-6 text-xl text-gray-500"> My name is David Torralbo, I'm a 24 years
                                             old Backend Developer from Banyoles, Girona. I work at GNA Hotel Solutions

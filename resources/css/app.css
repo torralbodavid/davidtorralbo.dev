@@ -6,7 +6,20 @@
 
 @font-face {
     font-family: "Helvetica Neue LT";
+    font-style:  normal;
+    font-weight: 100;
+    font-display: swap;
     src: url("../fonts/37ea4f5ec5cd1769ca21400bc7c48f82.woff2") format("woff2"),
     url("../fonts/37ea4f5ec5cd1769ca21400bc7c48f82.woff") format("woff"),
     url("../fonts/37ea4f5ec5cd1769ca21400bc7c48f82.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Helvetica Neue LT";
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/Helvetica Neue-LT-W06-75-Bold.woff2") format("woff2"),
+    url("../fonts/Helvetica Neue-LT-W06-75-Bold.woff") format("woff"),
+    url("../fonts/Helvetica Neue-LT-W06-75-Bold.ttf") format("truetype");
 }
