@@ -1098,7 +1098,7 @@
                                     </div>
                                     <div class="mt-6">
                                         <a href="#"
-                                           class="inline-block bg-indigo-600 border border-transparent py-3 px-8 rounded-md font-medium text-white hover:bg-indigo-700">Shop
+                                           class="inline-block bg-indigo-600 border border-transparent py-3 px-8 rounded-md font-bold text-white hover:bg-indigo-700">Shop
                                             Productivity</a>
                                     </div>
                                 </div>
