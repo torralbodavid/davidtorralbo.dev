@@ -10,7 +10,9 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
-        "livewire/livewire": "^2.10"
+        "livewire/livewire": "^2.10",
+        "torchlight/torchlight-commonmark": "^0.5.2",
+        "torchlight/torchlight-laravel": "^0.5.11"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.7",

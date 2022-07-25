@@ -11,6 +11,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'github-dark': '#24292e',
+      },
       fontFamily: {
         sans: ['Helvetica Neue LT', ...defaultTheme.fontFamily.sans],
       },
