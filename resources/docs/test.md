@@ -11,11 +11,10 @@ All Eloquent methods that return more than one model result will return instance
 
 All collections also serve as iterators, allowing you to loop over them as if they were simple PHP arrays:
 
-
 ```php
     use App\Models\User;
 
-    $users = User::where('active', 1)->get();
+    $users = User::where('active', 1)->get(); // [tl! focus]
 
     foreach ($users as $user) {
         echo $user->name;
