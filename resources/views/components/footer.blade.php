@@ -222,7 +222,8 @@
 
         <div class="py-10 md:flex md:items-center md:justify-between">
             <div class="text-center md:text-left">
-                <p class="text-sm text-gray-500">© 2021 All Rights Reserved</p>
+                <p class="text-sm text-gray-500 mb-2">© 2021 All Rights Reserved</p>
+                <p class="text-sm text-gray-500">Code highlighting provided by <a href="https://torchlight.dev">Torchlight</a></p>
             </div>
 
             <div class="mt-4 flex items-center justify-center md:mt-0">

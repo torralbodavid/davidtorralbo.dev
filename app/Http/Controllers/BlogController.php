@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Markdown\GithubFlavoredMarkdownConverter;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
