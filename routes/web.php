@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Middleware\LanguageMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
-Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
+Route::get('/{language}/blog/{slug}', [BlogController::class, 'show'])
+    ->middleware(LanguageMiddleware::class)
+    ->name('blog.show');

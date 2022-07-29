@@ -11,10 +11,10 @@
                             <a href="#"
                                class="relative flex-1 flex flex-col justify-center bg-white py-6 px-4 text-center focus:z-10">
                                 <p class="text-sm text-gray-500">
-                                    Download the app
+                                    Learn more
                                 </p>
                                 <p class="font-semibold text-gray-900">
-                                    Get an exclusive $5 off code
+                                    Check out my last blog posts
                                 </p>
                             </a>
                         </li>
@@ -23,10 +23,10 @@
                             <a href="#"
                                class="relative flex-1 flex flex-col justify-center bg-white py-6 px-4 text-center focus:z-10">
                                 <p class="text-sm text-gray-500">
-                                    Return when you're ready
+                                    Check your website's health
                                 </p>
                                 <p class="font-semibold text-gray-900">
-                                    60 days of free returns
+                                    Audit your website for free
                                 </p>
                             </a>
                         </li>
@@ -35,10 +35,10 @@
                             <a href="#"
                                class="relative flex-1 flex flex-col justify-center bg-white py-6 px-4 text-center focus:z-10">
                                 <p class="text-sm text-gray-500">
-                                    Sign up for our newsletter
+                                    May I help you?
                                 </p>
                                 <p class="font-semibold text-gray-900">
-                                    15% off your first order
+                                    Get in touch with me!
                                 </p>
                             </a>
                         </li>

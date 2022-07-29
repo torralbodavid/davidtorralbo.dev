@@ -1,4 +1,6 @@
 <x-layouts.app>
+    <x-breadcrumb />
+
     <article>
     <!-- Header -->
     <section class="relative bg-indigo-800">

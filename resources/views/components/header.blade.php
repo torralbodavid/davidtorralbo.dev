@@ -47,10 +47,10 @@
 
                 <div class="border-t border-gray-200 py-6 px-4 space-y-6">
                     <div class="flow-root">
-                        <a href="#" class="-m-2 p-2 block font-medium text-gray-900">Create an account</a>
+                        <a href="#" class="-m-2 p-2 block font-medium text-gray-900">Audit your website</a>
                     </div>
                     <div class="flow-root">
-                        <a href="#" class="-m-2 p-2 block font-medium text-gray-900">Sign in</a>
+                        <a href="#" class="-m-2 p-2 block font-medium text-gray-900">Contact</a>
                     </div>
                 </div>
 
@@ -103,10 +103,9 @@
                     </p>
 
                     <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                        <a href="#" class="text-sm font-medium text-white hover:text-gray-100">Create an
-                            account</a>
+                        <a href="#" class="text-sm font-medium text-white hover:text-gray-100">Audit your website</a>
                         <span class="h-6 w-px bg-gray-600" aria-hidden="true"></span>
-                        <a href="#" class="text-sm font-medium text-white hover:text-gray-100">Sign in</a>
+                        <a href="#" class="text-sm font-medium text-white hover:text-gray-100">Contact</a>
                     </div>
                 </div>
             </div>
@@ -145,6 +144,13 @@
 
                                         <a href="#"
                                            class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Contact</a>
+
+                                        <a href="#"
+                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">
+                                            <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                                <svg class="-ml-1 mr-1.5 h-3.5 w-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                                                Audit your website</span>
+                                        </a>
 
                                     </div>
                                 </div>
