@@ -1,11 +1,11 @@
-# Eloquent: Collections
+## Eloquent: Collections
 
 - [Introduction](#introduction)
 - [Available Methods](#available-methods)
 - [Custom Collections](#custom-collections)
 
 <a name="introduction"></a>
-## Introduction
+### Introduction
 
 All Eloquent methods that return more than one model result will return instances of the `Illuminate\Database\Eloquent\Collection` class, including results retrieved via the `get` method or accessed via a relationship. The Eloquent collection object extends Laravel's [base collection](/docs/{{version}}/collections), so it naturally inherits dozens of methods used to fluently work with the underlying array of Eloquent models. Be sure to review the Laravel collection documentation to learn all about these helpful methods!
 

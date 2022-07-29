@@ -34,5 +34,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 // });
 
 import Alpine from 'alpinejs'
-window.Alpine = Alpine
-Alpine.start()
+
+document.addEventListener('livewire:load', function () {
+    window.Alpine = Alpine
+    Alpine.start()
+})

@@ -34,6 +34,7 @@ pre {
 
 #post.prose :where(pre):not(:where([class~="not-prose"] *)) {
     @apply bg-github-dark;
+    @apply p-1;
 }
 /*
  Add some vertical padding and expand the width
