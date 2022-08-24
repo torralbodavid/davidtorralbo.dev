@@ -131,25 +131,25 @@
                                     <div class="h-full flex justify-center space-x-8">
 
                                         <a href="#"
-                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Blog</a>
+                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">{{ __('header.blog') }}</a>
 
                                         <a href="#"
-                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Talks</a>
+                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">{{ __('header.talks') }}</a>
 
                                         <a href="#"
-                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">About me</a>
+                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">{{ __('header.about_me') }}</a>
 
                                         <a href="#"
-                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Uses</a>
+                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">{{ __('header.uses') }}</a>
 
                                         <a href="#"
-                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Contact</a>
+                                           class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">{{ __('header.contact') }}</a>
 
                                         <a href="#"
                                            class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">
                                             <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
                                                 <svg class="-ml-1 mr-1.5 h-3.5 w-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
-                                                Audit your website</span>
+                                                {{ __('header.seo_audit') }}</span>
                                         </a>
 
                                     </div>

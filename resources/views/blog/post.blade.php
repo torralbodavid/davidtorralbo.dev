@@ -54,7 +54,27 @@
         </div>
         <div class="relative px-4 sm:px-6 lg:px-8">
             <div id="post" class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+
                 {!! $content !!}
+
+                <div class="relative">
+                    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span class="px-2 bg-white text-sm text-gray-500">Sobre el autor</span>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="mr-4 flex-shrink-0 self-center">
+                        <img class="h-16 w-16 rounded-full" src="https://media-exp1.licdn.com/dms/image/C5603AQHpQsDmPLh_8g/profile-displayphoto-shrink_800_800/0/1564594765402?e=1665014400&v=beta&t=XEtwiI1EM8_MrDmar1eULVhargv79aBFxxjMUCcUlNU" alt="">
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold">David Torralbo</h4>
+                        <p class="mt-1">Back-end developer.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

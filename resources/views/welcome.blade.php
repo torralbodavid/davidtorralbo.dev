@@ -69,9 +69,9 @@
                             <div class="mt-6 sm:max-w-xl">
                                 <h1 class="text-6xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
                                     Welcome to my blog 🥳</h1>
-                                <p class="mt-6 text-xl text-gray-500"> My name is David Torralbo, I'm a 24 years
+                                <p class="mt-6 text-lg text-gray-500"> My name is David Torralbo, I'm a 24 years
                                     old Backend Developer from Banyoles, Girona. I work at GNA Hotel Solutions
-                                    since 2017. <br><br>I am an open source contributor with currently 32
+                                    since 2017. <br><br>I am an <span class="relative z-10 inline-block px-1 after:absolute after:-bottom-2 after:right-0 after:-z-10 after:h-2 after:w-full after:-translate-y-2 hover:after:h-6 hover:text-black after:bg-yellow-300 after:content-[''] hover:transition hover:ease-in-out hover:duration-600 transition ease-in-out duration-300">open source contributor</span> with currently 32
                                     repositories at GitHub.</p>
                             </div>
                             <div class="mt-6">
@@ -145,11 +145,18 @@
                                 <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800"> Article </span>
                             </a>
                         </div>
-                        <a href="#" class="block mt-4">
-                            <p class="text-xl font-semibold text-gray-900">Boost your conversion rate</p>
+                        <div class="block mt-4">
+                            <a href="#" class="text-xl font-semibold text-gray-900 font-bold
+          bg-gradient-to-r from-pink-500 to-purple-500
+          bg-[length:0px_3px]
+          bg-left-bottom
+          bg-no-repeat
+          transition-[background-size]
+          duration-500
+          hover:bg-[length:100%_3px]">Boost your conversion rate</a>
                             <p class="mt-3 text-base text-gray-500">Nullam risus blandit ac aliquam justo ipsum.
                                 Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
-                        </a>
+                        </div>
                         <div class="mt-6 flex items-center">
                             <div class="flex-shrink-0">
                                 <a href="#">
