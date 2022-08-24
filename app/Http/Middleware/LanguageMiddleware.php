@@ -16,6 +16,10 @@ class LanguageMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        abort_if(! in_array($request->language, config('web.languages', [])), 404);
+
+        app()->setLocale($request->language);
+
         return $next($request);
     }
 }
