@@ -34,7 +34,6 @@
     </div>
     <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
         <img width="640" height="678" class="absolute inset-0 w-full h-full object-cover"
-             loading="lazy"
              srcset="{{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 414, null)->getOriginalName() }} 600w,
                          {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 414, null)->getOriginalName() }} 800w,
                          {{ ImageCacher::crop('storage/img/david-torralbo-hero-section.jpg', 640, null)->getOriginalName() }} 1280w"
