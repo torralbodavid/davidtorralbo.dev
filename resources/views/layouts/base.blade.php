@@ -52,8 +52,6 @@
 @if(request()->route()?->getName() !== 'home')
     @livewireScripts
 @endif
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6078687801501458"
-        crossorigin="anonymous"></script>
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function (e) {
         var script = document.createElement('script');
